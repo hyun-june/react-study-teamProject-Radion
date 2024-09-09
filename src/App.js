@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import HomePage from "./pages/Homepage/HomePage";
+import AppLayout from "./layout/AppLayout";
+
+{/* <Route path=":id" element={} /> // 파라미터 받아오기 */}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+
+          <Route index element={<HomePage />} /> {/* index : 위 path를 그대로 path로 쓰겠다*/}
+
+
+
+
+
+
+
+        </Route>
+
+        <Route path="*" element={<NotFoundPage/>} /> {/* 오류 화면 */}
+      </Routes>
     </div>
   );
 }
