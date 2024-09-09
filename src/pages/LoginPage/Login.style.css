@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+.loginpage_container {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* font-family: "Ubuntu", sans-serif; */
+}
+
+h2 {
+  color: white;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-weight: bold;
+}
+
+.loginpage_loginbtn {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 3em;
+  padding: 0.6em 1.7em 0.6em 1.7em;
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+.loginpage_googleicon {
+  margin-right: 1em;
+  margin-bottom: 3px;
+}
