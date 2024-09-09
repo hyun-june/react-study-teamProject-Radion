@@ -39,7 +39,9 @@
 ## API
 - spotify API
 <br/><br/>
-
+## 스탠드업 미팅
+- 21:30분
+<br/><br/>
 ## 개발 일지
 <details>
   <summary><b>2024년 9월 08일 일요일 (1일차)</b></summary>
