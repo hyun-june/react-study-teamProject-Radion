@@ -135,18 +135,10 @@
         <div>
          <ul>
            <li>
+             api로 데이터 가져오기
            </li>
            <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
+            로고 정하기
            </li>
          </ul> 
         </div>
@@ -156,7 +148,12 @@
         <div>
           <ul>
             <li>
+              혜정
             </li>
+            <ol>
+              로고완성 <br/>
+              로그인페이지 UI구현<br/>
+            </ol>
             <li>
             </li>
             <li>
