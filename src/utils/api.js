@@ -1,23 +1,36 @@
 import axios from "axios";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
+import { getAccessToken } from "./getAccessToken";
 
 const api = axios.create({
-  baseURL:"https://~~~~~~",
+  baseURL:"https://api.spotify.com/v1",
   headers:{
     accept: 'application/json',
-    Authorization: `Bearer ${API_KEY}`
   }
 });
 
-// 요청 인터셉터 추가하기
-axios.interceptors.request.use(function (config) {
-  // 요청이 전달되기 전에 작업 수행
-  return config;
-}, function (error) {
-  // 요청 오류가 있는 작업 수행
-  return Promise.reject(error);
-});
+api.interceptors.request.use(
+  async (config) => {
+    // localStorage에서 토큰 가져오기
+    let token = window.localStorage.getItem('token');
+
+    // 토큰이 없을 경우 getAccessToken 호출하여 토큰을 가져옴
+    if (!token) {
+      const accessTokenData = await getAccessToken();
+      token = accessTokenData.access_token;  // 새로 발급된 토큰
+      window.localStorage.setItem('token', token);  // 토큰을 localStorage에 저장
+    }
+
+    // Authorization 헤더에 토큰 추가
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 // 응답 인터셉터 추가하기
 axios.interceptors.response.use(function (response) {
