@@ -10,20 +10,12 @@ const api = axios.create({
 
 api.interceptors.request.use(
   async (config) => {
-    // localStorage에서 토큰 가져오기
-    let token = window.localStorage.getItem('token');
-
-    // 토큰이 없을 경우 getAccessToken 호출하여 토큰을 가져옴
-    if (!token) {
-      const accessTokenData = await getAccessToken();
-      token = accessTokenData.access_token;  // 새로 발급된 토큰
-      window.localStorage.setItem('token', token);  // 토큰을 localStorage에 저장
-    }
-
+    // 계속 토큰을 가져옴
+    const token = await getAccessToken();
+    
     // Authorization 헤더에 토큰 추가
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
+    config.headers.Authorization = `Bearer ${token}`;
+    
 
     return config;
   },
