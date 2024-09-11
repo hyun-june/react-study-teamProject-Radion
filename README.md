@@ -165,9 +165,17 @@
             <li>
               희명
             </li>
+            <ol>
+              api 데이터 구조 확인 <br/>
+              데이터 활용해서 배너나 앨범 만들기<br/>
+            </ol>
             <li>
               정찬
             </li>
+            <ol>
+              api 구조 생성 <br/>
+              음악 detail api 호출 및 UI 작업 <br/>
+            </ol>
           </ul>
         </div>
     </details>  
@@ -177,8 +185,34 @@
       <summary><b>Done</b></summary>
         <div>
          <ul>
-           <li>
-           </li>
+            <li>
+              혜정
+            </li>
+            <ol>
+              로고완성 <br/>
+              로그인페이지 UI구현<br/>
+              소셜 로그인 기능 구현<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+              youtube api, spotify api 데이터 가져오기
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              api 데이터 구조 확인 <br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              api 구조 생성 <br/>
+              음악 detail api 호출 및 UI 작업 <br/>
+            </ol>
+          </ul>
          </ul> 
         </div>
     </details>
@@ -187,17 +221,30 @@
         <div>
           <ul>
             <li>
+              혜정
             </li>
+            <ol>
+              navbar 디자인 수정<br/>
+              로그인 했을 때 UI 수정<br/>
+            </ol>
             <li>
+              현준
             </li>
+            <ol>
+              youtube api, spotify api 활용해서 재생 시켜보기
+            </ol>
             <li>
+              희명
             </li>
+            <ol>
+              데이터 활용해서 배너, 앨범 만들기<br/>
+            </ol>
             <li>
+              정찬
             </li>
-            <li>
-            </li>
-            <li>
-            </li>
+            <ol>
+              detail page 수정
+            </ol>
           </ul>
         </div>
     </details>  
