@@ -17,12 +17,14 @@ const TrackTable = ({ album }) => {
         const m = Math.floor(duration / 1000 / 60);
         const s = Math.floor(duration / 1000 - m * 60);
         return (
-          <Row key={index + 1}>
+          <Row key={index + 1} className="tracktable_row">
             <Col lg="1" className="tracktable_center">{index + 1}</Col>
 
             <Col lg="10" className="mb-2">
               <Row>
-                {newAlbum?.name}
+                <div>
+                  <span className="tracktable_title">{newAlbum?.name}</span>
+                </div>
               </Row>
               <div>
                 {newAlbum?.artists.map((artist, index) => {

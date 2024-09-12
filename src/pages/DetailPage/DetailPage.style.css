@@ -26,3 +26,8 @@
     font-weight: 800;
     font-size: 2rem;
 }
+
+.detailpage_artistName:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}

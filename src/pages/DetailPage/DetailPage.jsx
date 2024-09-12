@@ -67,7 +67,7 @@ const DetailPage = () => {
             <Row>
               <Col>
                 <div>
-                  {artistName} • {album?.release_date.slice(0, 4)}
+                  <span className="detailpage_artistName">{artistName}</span> • <span>{album?.release_date.slice(0, 4)}</span>
                 </div>
               </Col>
             </Row>
