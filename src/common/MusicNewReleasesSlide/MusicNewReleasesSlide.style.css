@@ -1,0 +1,5 @@
+/* MusicNewReleasesSlide.css */
+.MusicNewReleases_image-card img {
+    width: 90%; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+}
