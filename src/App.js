@@ -5,7 +5,8 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import HomePage from "./pages/Homepage/HomePage";
 import AppLayout from "./layout/AppLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import DetailPage from "./pages/DetailPage/DetailPage";
+import AlbumDetailPage from "./pages/AlbumDetailPage/AlbumDetailPage";
+import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
 
 function App() {
   return (
@@ -15,8 +16,12 @@ function App() {
           <Route index element={<HomePage />} />{" "}
           <Route path="login" element={<LoginPage />} />
 
-          <Route path="album">
-            <Route path=":id" element={<DetailPage/>} />
+          <Route path="albums">
+            <Route path=":id" element={<AlbumDetailPage/>} />
+          </Route>
+
+          <Route path="tracks">
+            <Route path=":id" element={<TrackDetailPage/>} />
           </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} /> {/* 오류 화면 */}

@@ -1,8 +1,17 @@
 import React from "react";
 import "./TrackTable.style.css";
 import { Col, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const TrackTable = ({ album }) => {
+  const navigate = useNavigate();
+
+  const toTracketailPage = (id, event) => {
+    event.preventDefault();
+    navigate(`/tracks/${id}`);
+
+  }
+
   return (
     <>
       <Row className="mt-5">
@@ -23,7 +32,7 @@ const TrackTable = ({ album }) => {
             <Col lg="10" className="mb-2">
               <Row>
                 <div>
-                  <span className="tracktable_title">{newAlbum?.name}</span>
+                  <span className="tracktable_title" onClick={(event) => toTracketailPage(newAlbum?.id,event)}>{newAlbum?.name}</span>
                 </div>
               </Row>
               <div>
