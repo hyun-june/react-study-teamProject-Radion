@@ -1,22 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { UserContextProvider } from "./context/UserContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-const queryClient = new QueryClient()
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const queryClient = new QueryClient();
 
 root.render(
   <Provider store={store}>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <App />
+        <GoogleOAuthProvider clientId="512260151861-bmtni45lb8tngei45jueoidnoqfm56i6.apps.googleusercontent.com">
+          <UserContextProvider>
+            <App />
+          </UserContextProvider>
+        </GoogleOAuthProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
