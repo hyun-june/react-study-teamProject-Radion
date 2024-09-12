@@ -13,7 +13,7 @@ import { useQuery } from "@tanstack/react-query"
 import api from '../utils/api';
 
 const functionName=()=>{
-  return api.get(`/albums/4aawyAB9vmqN3uQ7FjRGTy`);
+  return api.get(`/albums/5pSk3c3wVwnb2arb6ohCPU`);
 }
 
 export const useAPIExampleQuery=() => {
