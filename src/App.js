@@ -38,7 +38,7 @@ function App() {
           <Route path="/music" element={<MusicPlayer/>}/>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </UserContextProvider>
+      </UserContextProvider> 
     </div>
   );
 }
