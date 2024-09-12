@@ -1,34 +1,28 @@
 .detailpage_body {
     background-color: black;
-    height: 100vh;
+    color: white;
+    height: 100%;
+}
+
+.detailpage_title {
+    margin-top: 2rem;
+}
+
+.detailpage_title > div {
+    font-weight: 900;
+    font-size: 5rem;
 }
 
 .detailpage_poster {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-.detailpage_poster > div {
-    height: 100%;
-    width: auto;
+.detailpage_poster:hover {
+    transform: scale(1.05);
 }
 
-.detailpage_poster img {
-    width: 100%;
-    height: 100%;
-}
-
-.detailpage_info {
-    margin-top: 1rem;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-}
-
-.detailpage_info > div {
-    width: 100%;
-    height: 100%;
-    background-color: white;
+.detailpage_more_albums {
+    font-weight: 800;
+    font-size: 2rem;
 }
