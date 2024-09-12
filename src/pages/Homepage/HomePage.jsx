@@ -6,10 +6,6 @@ import MusicPlaylist from './component/MusicPlaylist/MusicPlaylist';
 // import "./HomePage.style.css";
 
 const HomePage = () => {
-  // const{
-  //   data
-  // } = usePopularMusicQuery();
-  // console.log("usePopularMusicQuery",data);
   return (
     <div>
       <div className='homepage_container' style={{backgroundColor:"#1f1f1f"}}>
