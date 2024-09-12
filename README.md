@@ -255,7 +255,30 @@
         <div>
          <ul>
            <li>
-           </li>
+              혜정
+            </li>
+            <ol>
+              navbar 디자인 수정<br/>
+              로그인 했을 때 UI 수정<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+              youtube api, spotify api 활용해서 재생 시켜보기
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              데이터 활용해서 배너, 앨범 만들기<br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              detail page 수정
+            </ol>
          </ul> 
         </div>
     </details>
@@ -264,17 +287,30 @@
         <div>
           <ul>
             <li>
+              혜정
             </li>
+            <ol>
+              <br/>
+              <br/>
+            </ol>
             <li>
+              현준
             </li>
+            <ol>
+              <br/>
+            </ol>
             <li>
+              희명
             </li>
+            <ol>
+              <br/>
+            </ol>
             <li>
+              정찬
             </li>
-            <li>
-            </li>
-            <li>
-            </li>
+            <ol>
+              <br/>
+            </ol>
           </ul>
         </div>
     </details>  
