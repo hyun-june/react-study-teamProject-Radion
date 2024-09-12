@@ -5,6 +5,7 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import HomePage from "./pages/Homepage/HomePage";
 import AppLayout from "./layout/AppLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 
 {
   /* <Route path=":id" element={} /> // 파라미터 받아오기 */
@@ -20,6 +21,7 @@ function App() {
           <Route path="login" element={<LoginPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} /> {/* 오류 화면 */}
+        <Route path="/music" element={<MusicPlayer/>}/>
       </Routes>
     </div>
   );
