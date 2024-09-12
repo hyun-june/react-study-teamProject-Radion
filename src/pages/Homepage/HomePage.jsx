@@ -8,7 +8,7 @@ import MusicPlaylist from './component/MusicPlaylist/MusicPlaylist';
 const HomePage = () => {
   return (
     <div>
-      <div className='homepage_container' style={{backgroundColor:"#1f1f1f"}}>
+      <div style={{backgroundColor:"#1f1f1f",color:"white"}}>
       홈페이지 입니다
       <Banner/>
       <MusicPlaylist/>
