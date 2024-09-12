@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
@@ -7,25 +8,35 @@ import AppLayout from "./layout/AppLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import AlbumDetailPage from "./pages/AlbumDetailPage/AlbumDetailPage";
 import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
+import { UserContextProvider } from "./context/UserContext";
+import PrivateRoute from "./route/PrivateRoute";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<HomePage />} />{" "}
-          <Route path="login" element={<LoginPage />} />
+      <UserContextProvider>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<HomePage />} />{" "}
+            <Route
+              path="login"
+              element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
+            />
 
-          <Route path="albums">
-            <Route path=":id" element={<AlbumDetailPage/>} />
-          </Route>
+            <Route path="albums">
+              <Route path=":id" element={<AlbumDetailPage/>} />
+            </Route>
 
-          <Route path="tracks">
-            <Route path=":id" element={<TrackDetailPage/>} />
+            <Route path="tracks">
+              <Route path=":id" element={<TrackDetailPage/>} />
+            </Route>
           </Route>
-        </Route>
-        <Route path="*" element={<NotFoundPage />} /> {/* 오류 화면 */}
-      </Routes>
+          {/* 오류 화면 */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </UserContextProvider>
     </div>
   );
 }

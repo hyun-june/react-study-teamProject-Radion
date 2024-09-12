@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 
 .loginpage_container {
-  background-color: black;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
-  /* font-family: "Ubuntu", sans-serif; */
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h1 {
@@ -23,6 +23,26 @@ h1 {
   margin-bottom: 3px;
   font-size: 1.5em;
 }
+.loginpage_logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+
+.loginpage_logo {
+  width: 5em;
+  height: 5em;
+  margin-right: 1em;
+}
+
+.loginpage_logo_text {
+  font-size: 70px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
 
 .loginpage_loginbtn {
   background-color: black;
@@ -37,4 +57,10 @@ h1 {
 .loginpage_loginbtn:hover {
   border: 2px solid white;
   background-color: transparent;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  margin-bottom: 5em;
 }

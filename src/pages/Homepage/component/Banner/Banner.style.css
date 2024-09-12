@@ -1,0 +1,22 @@
+.banner_area {
+    display: flex;
+    justify-content: center; /* Horizontally center the banner */
+    align-items: center; /* Vertically center the banner */
+}
+.banner_img {
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: 60vh; /* Set the height of the image to 60% of the viewport height */
+    max-width: 100%; /* Limit the maximum width of the image to prevent stretching */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 2em auto; /* Center the image horizontally within its container */
+}
+
+.banner {
+    text-align: center; /* Center the content inside the banner */
+
+}
+
+.banner-text-area {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

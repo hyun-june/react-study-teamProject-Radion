@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 0.15em;
+  padding-bottom: 0.1em;
+  font-size: 1.7em;
+  background-color: black !important;
+}
+
+.navbar_logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_logo_img {
+  width: 1.7em;
+  height: 1.7em;
+  margin-right: 0.5em;
+}
+
+.navbar_logo_text {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.input-group {
+  position: relative;
+}
+
+.navbar_search_btn {
+  /* margin-right: 1em; */
+  background-color: white;
+  border: none;
+}
+
+.navbar_search_icon {
+  position: absolute;
+  right: 45px;
+  top: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.navbar_search_icon:hover {
+  background-color: transparent;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navbar-collapse {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.form-inline {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  max-width: 730px; /* Adjust as needed */
+}
+
+.form-inline .form-control {
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+}
+
+/* 부트스트랩 <Button>컴포넌트 스타일링 */
+.navbar_login_btn {
+  background-color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 0.3em 0.5em;
+  color: black;
+  white-space: nowrap;
+  border: none;
+}
+
+.navbar_login_btn:hover {
+  background-color: gray;
+}
+
+.navbar_user_info {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_user_info span {
+  margin-right: 0.5em;
+  color: white;
+}
+
+.navbar_logout_btn {
+  background-color: gray;
+  color: white;
+  border: none;
+}
+
+.navbar_logout_btn:hover {
+  background-color: gray;
+  transform: scale(1.05);
+}
+
+/* 일반 <button>태그 사용 */
+/* .navbar_login_btn {
+  width: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: white;
+  white-space: nowrap;
+  border: none;
+  background-color: black;
+}
+
+.navbar_login_btn:hover {
+  background-color: gray;
+  border-radius: 1em;
+} */
