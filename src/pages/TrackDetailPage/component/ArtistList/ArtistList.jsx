@@ -30,8 +30,8 @@ const ArtistList = ({artists}) => {
           <Col lg="2">
             <img className='artistList_profile' src={artist.images[2].url} alt=''></img>
           </Col>
-          <Col lg="auto">
-            <div className='artistList_row'>
+          <Col lg="auto" className='artistList_row'>
+            <div>
               <Row><div>Artist</div></Row>
               <Row><div>{artist.name}</div></Row>
             </div>
