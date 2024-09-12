@@ -3,7 +3,7 @@
 <br/>
 
 ## 링크
-- [배포]
+- [배포](https://radion-react-project.vercel.app/)
 - [Figma](https://www.figma.com/design/1XkwexEXjYZP0XyOWO04Dm/리액트-스터디-2기-6조?node-id=0-1&node-type=CANVAS&t=Rqzwfp7MrQ9fbRIU-0)
 <br/><br/>
 
