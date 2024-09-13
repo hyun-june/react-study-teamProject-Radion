@@ -1,0 +1,33 @@
+.albumdetailpage_body {
+    background-color: #1f1f1f;
+    color: white;
+    height: 100%;
+}
+
+.albumdetailpage_title {
+    margin-top: 2rem;
+}
+
+.albumdetailpage_title > div {
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+.albumdetailpage_poster {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.albumdetailpage_poster:hover {
+    transform: scale(1.05);
+}
+
+.albumdetailpage_more_albums {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.albumdetailpage_artistName:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}

@@ -1,26 +1,44 @@
-import { Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import HomePage from "./pages/Homepage/HomePage";
 import AppLayout from "./layout/AppLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
-
-{
-  /* <Route path=":id" element={} /> // 파라미터 받아오기 */
-}
+import AlbumDetailPage from "./pages/AlbumDetailPage/AlbumDetailPage";
+import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
+import { UserContextProvider } from "./context/UserContext";
+import PrivateRoute from "./route/PrivateRoute";
+import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<HomePage />} />{" "}
-          {/* index : 위 path를 그대로 path로 쓰겠다*/}
-          <Route path="login" element={<LoginPage />} />
-        </Route>
-        <Route path="*" element={<NotFoundPage />} /> {/* 오류 화면 */}
-      </Routes>
+      <UserContextProvider>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<HomePage />} />{" "}
+            <Route
+              path="login"
+              element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
+            />
+
+            <Route path="albums">
+              <Route path=":id" element={<AlbumDetailPage/>} />
+            </Route>
+
+            <Route path="tracks">
+              <Route path=":id" element={<TrackDetailPage/>} />
+            </Route>
+          </Route>
+          {/* 오류 화면 */}
+          <Route path="/music" element={<MusicPlayer/>}/>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </UserContextProvider> 
     </div>
   );
 }
