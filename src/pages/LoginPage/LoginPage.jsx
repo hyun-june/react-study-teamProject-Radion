@@ -44,7 +44,7 @@ const Login = () => {
         const userProfile = userProfileResponse.data;
         console.log("User Profile:", userProfile);
 
-        // 사용자 정보 저장 (로컬 스토리지 또는 상태)
+        // 사용자 정보 저장 (로컬 스토리지)
         localStorage.setItem("user", JSON.stringify(userProfile));
         setLocalUser(userProfile);
         setUser(userProfile); // Set globally
@@ -69,9 +69,13 @@ const Login = () => {
     <div className="loginpage_container">
       {/* when user is not logged in */}
       {!localUser && (
-        <div>
-          {/* <h1>Log in to radion</h1> */}
-          <div className="loginpage_logo_container">
+        <div className="loginpage_content">
+          <div
+            className="loginpage_logo_container"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <img
               src={radionLogo}
               alt="radion-logo"
@@ -86,7 +90,7 @@ const Login = () => {
           </Button>
         </div>
       )}
-      <div className="copyright">© 2024 Radion LLC</div>
+      {/* <div className="copyright">© 2024 Radion LLC</div> */}
     </div>
   );
 };

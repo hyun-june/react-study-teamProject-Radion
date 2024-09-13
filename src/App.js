@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // 부트스트랩 CSS
+import "bootstrap/dist/js/bootstrap.bundle.min"; // 부트스트랩 JS + Popper.js
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import HomePage from "./pages/Homepage/HomePage";
 import AppLayout from "./layout/AppLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import AlbumDetailPage from "./pages/AlbumDetailPage/AlbumDetailPage";
 import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
+import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 import { UserContextProvider } from "./context/UserContext";
-import PrivateRoute from "./route/PrivateRoute";
+// import PrivateRoute from "./route/PrivateRoute";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -24,13 +26,12 @@ function App() {
               path="login"
               element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
             />
-
+            <Route path="/playlist" element={<MusicPlayer />} />
             <Route path="albums">
-              <Route path=":id" element={<AlbumDetailPage/>} />
+              <Route path=":id" element={<AlbumDetailPage />} />
             </Route>
-
             <Route path="tracks">
-              <Route path=":id" element={<TrackDetailPage/>} />
+              <Route path=":id" element={<TrackDetailPage />} />
             </Route>
           </Route>
           {/* 오류 화면 */}
