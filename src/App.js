@@ -12,6 +12,8 @@ import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
 import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 import { UserContextProvider } from "./context/UserContext";
 // import PrivateRoute from "./route/PrivateRoute";
+import PrivateRoute from "./route/PrivateRoute";
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -35,9 +37,10 @@ function App() {
             </Route>
           </Route>
           {/* 오류 화면 */}
+          <Route path="/music" element={<MusicPlayer/>}/>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </UserContextProvider>
+      </UserContextProvider> 
     </div>
   );
 }

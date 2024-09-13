@@ -5,7 +5,7 @@ import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
 import { Alert, Button, Col, Container, Modal, Row } from "react-bootstrap";
 import TrackTable from "./component/TrackTable/TrackTable";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
-import AudioPlayerButton from "../../common/component/AudioPlayerButton";
+import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
 
 const AlbumDetailPage = () => {
   // TODO. useParams 쓰는걸로 바꿔야 함.
@@ -130,12 +130,9 @@ const AlbumDetailPage = () => {
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            {album?.name}
-          </Modal.Title>
+        <Modal.Header closeButton className="albumdetailpage_modal_header">
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="albumdetailpage_modal_body">
           <img src={album?.images[0].url} alt="" />
         </Modal.Body>
       </Modal>

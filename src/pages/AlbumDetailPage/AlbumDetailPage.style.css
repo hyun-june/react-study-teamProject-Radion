@@ -31,3 +31,14 @@
     border-bottom: 1px solid white;
     cursor: pointer;
 }
+
+.albumdetailpage_modal_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .albumdetailpage_modal_header {
+    border-bottom: none;
+    background: none !important;
+  }
