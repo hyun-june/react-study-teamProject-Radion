@@ -11,6 +11,8 @@ import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
 import { UserContextProvider } from "./context/UserContext";
 import PrivateRoute from "./route/PrivateRoute";
 import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
+import PlayListPage from "./pages/PlayListPage/PlayListPage.jsx"
+import TrackListPage from "./pages/TrackListPage/TrackListPage.jsx";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -21,6 +23,9 @@ function App() {
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />{" "}
+            {/* <Route path="music" element={<MusicPlayer/>}/> */}
+            <Route path="music" element={<PlayListPage/>}/>
+            <Route path="list" element={<TrackListPage/>}/>
             <Route
               path="login"
               element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
@@ -35,7 +40,6 @@ function App() {
             </Route>
           </Route>
           {/* 오류 화면 */}
-          <Route path="/music" element={<MusicPlayer/>}/>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </UserContextProvider>

@@ -22,7 +22,6 @@ const AppLayout = () => {
     } else {
       navigate(``);
     }
-
     setKeyword("");
   };
 
