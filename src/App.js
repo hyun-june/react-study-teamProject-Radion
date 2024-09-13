@@ -13,7 +13,6 @@ import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 import { UserContextProvider } from "./context/UserContext";
 // import PrivateRoute from "./route/PrivateRoute";
 import PrivateRoute from "./route/PrivateRoute";
-import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 import PlayListPage from "./pages/PlayListPage/PlayListPage.jsx"
 import TrackListPage from "./pages/TrackListPage/TrackListPage.jsx";
 
