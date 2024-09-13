@@ -1,9 +1,9 @@
-# 사이트 이름
+# radion
 <h1>코딩알려주는누나 리액트 스터디 2기 팀프로젝트 6조</h1>
 <br/>
 
 ## 링크
-- [배포]
+- [배포](https://radion-react-project.vercel.app/)
 - [Figma](https://www.figma.com/design/1XkwexEXjYZP0XyOWO04Dm/리액트-스터디-2기-6조?node-id=0-1&node-type=CANVAS&t=Rqzwfp7MrQ9fbRIU-0)
 <br/><br/>
 
@@ -28,13 +28,20 @@
 <br/>
 
 ## 기능
-
+<ul>
+  <li>로그인 기능</li>
+  <li>음악 검색</li>
+  <li>추천 음악</li>
+  <li>플레이리스트</li>
+</ul>
 <br/><br/>
 
 ## API
 - spotify API
 <br/><br/>
-
+## 스탠드업 미팅
+- 21:30분
+<br/><br/>
 ## 개발 일지
 <details>
   <summary><b>2024년 9월 08일 일요일 (1일차)</b></summary>
@@ -88,16 +95,10 @@
         <div>
          <ul>
            <li>
+             오후 10시 스탠드업 미팅 진행
            </li>
            <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
+             각자 구현할 부분 정하기
            </li>
          </ul> 
         </div>
@@ -107,16 +108,22 @@
         <div>
           <ul>
             <li>
+              spotify api 사용법 익히기
             </li>
             <li>
+              혜정 - 로그인/회원가입/nav바
             </li>
             <li>
+              정찬 - 상세페이지 
             </li>
             <li>
+              희명 - 홈페이지 
             </li>
             <li>
+              현준 - 플레이어 음악 재생 기능  
             </li>
             <li>
+              회의 시간 21:30분 변경
             </li>
           </ul>
         </div>
@@ -128,18 +135,10 @@
         <div>
          <ul>
            <li>
+             api로 데이터 가져오기
            </li>
            <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
-           </li>
-           <li>
+            로고 정하기
            </li>
          </ul> 
         </div>
@@ -149,15 +148,34 @@
         <div>
           <ul>
             <li>
+              혜정
             </li>
+            <ol>
+              로고완성 <br/>
+              로그인페이지 UI구현<br/>
+              소셜 로그인 기능 구현<br/>
+              navbar ui 구현<br/>
+            </ol>
             <li>
+              현준
             </li>
+            <ol>
+              뮤직 플레이어 가져오기
+            </ol>
             <li>
+              희명
             </li>
+            <ol>
+              api 데이터 구조 확인 <br/>
+              데이터 활용해서 배너나 앨범 만들기<br/>
+            </ol>
             <li>
+              정찬
             </li>
-            <li>
-            </li>
+            <ol>
+              api 구조 생성 <br/>
+              음악 detail api 호출 및 UI 작업 <br/>
+            </ol>
           </ul>
         </div>
     </details>  
@@ -167,8 +185,34 @@
       <summary><b>Done</b></summary>
         <div>
          <ul>
-           <li>
-           </li>
+            <li>
+              혜정
+            </li>
+            <ol>
+              로고완성 <br/>
+              로그인페이지 UI구현<br/>
+              소셜 로그인 기능 구현<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+              youtube api, spotify api 데이터 가져오기
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              api 데이터 구조 확인 <br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              api 구조 생성 <br/>
+              음악 detail api 호출 및 UI 작업 <br/>
+            </ol>
+          </ul>
          </ul> 
         </div>
     </details>
@@ -177,17 +221,30 @@
         <div>
           <ul>
             <li>
+              혜정
             </li>
+            <ol>
+              navbar 디자인 수정<br/>
+              로그인 했을 때 UI 수정<br/>
+            </ol>
             <li>
+              현준
             </li>
+            <ol>
+              youtube api, spotify api 활용해서 재생 시켜보기
+            </ol>
             <li>
+              희명
             </li>
+            <ol>
+              데이터 활용해서 배너, 앨범 만들기<br/>
+            </ol>
             <li>
+              정찬
             </li>
-            <li>
-            </li>
-            <li>
-            </li>
+            <ol>
+              detail page 수정
+            </ol>
           </ul>
         </div>
     </details>  
@@ -198,7 +255,30 @@
         <div>
          <ul>
            <li>
-           </li>
+              혜정
+            </li>
+            <ol>
+              navbar 디자인 수정<br/>
+              로그인 했을 때 UI 수정<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+              youtube api, spotify api 활용해서 재생 시켜보기
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              데이터 활용해서 배너, 앨범 만들기<br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              detail page 수정
+            </ol>
          </ul> 
         </div>
     </details>
@@ -207,16 +287,34 @@
         <div>
           <ul>
             <li>
+              혜정
+            </li>
+            <ol>
+              navbar 수정(링크 및 로그인 버튼)<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+               musicPlayer page css 수정<br/>
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              homepage css 수정<br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              detail page 수정<br/>
+            </ol>
+            <li>
+              homepage 앨범 클릭시 detail page로 이동
             </li>
             <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
+              playlist의 내용 보여줄 page 만들기
             </li>
           </ul>
         </div>
@@ -228,7 +326,30 @@
         <div>
          <ul>
            <li>
-           </li>
+              혜정
+            </li>
+            <ol>
+              navbar 수정(링크 및 로그인 버튼)<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+               musicPlayer page css 수정<br/>
+                            playlist의 내용 보여줄 page 만들기<br/>
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              homepage css 수정<br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              detail page 수정<br/>
+            </ol>
          </ul> 
         </div>
     </details>
@@ -237,6 +358,10 @@
         <div>
           <ul>
             <li>
+              homepage 앨범 클릭시 detail page로 이동
+            </li>
+            <li>
+              page별 navigate 연결하기
             </li>
           </ul>
         </div>
