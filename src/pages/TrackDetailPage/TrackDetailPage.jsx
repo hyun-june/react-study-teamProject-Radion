@@ -3,8 +3,8 @@ import "./TrackDetailPage.style.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { Alert, Col, Container, Modal, Row } from "react-bootstrap";
 import { useTrackDetailQuery } from './../../hooks/useTrackDetail';
-import AudioPlayer from "../../common/component/AudioPlayerButton";
-import ArtistList from "./component/ArtistList/ArtistList";
+import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
+import ArtistTable from "./component/ArtistTable/ArtistTable";
 
 const TrackDetailPage = () => {
   // const id = "4twllsTUoTAFxiVeq3bNjq";
@@ -74,13 +74,13 @@ const TrackDetailPage = () => {
 
         <Row>
           <Col className="mt-3">
-            <AudioPlayer preview={track?.preview_url}/>
+            <AudioPlayerButton preview={track?.preview_url}/>
           </Col>
         </Row>
 
-
-        <ArtistList artists={track?.artists}/>
-
+        <div className="mt-3">
+          <ArtistTable artists={track?.artists}/>
+        </div>
 
 
         <Row><div className="trackdetailpage_more_albums mt-5">Watch more of {artistName}'s songs</div></Row>
@@ -119,13 +119,12 @@ const TrackDetailPage = () => {
         show={lgShow}
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
+        className="trackdetailpage_modal"
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            {track?.name}
-          </Modal.Title>
+        <Modal.Header closeButton className="trackdetailpage_modal_header">
+          
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="trackdetailpage_modal_body">
           <img src={track?.album.images[0].url} alt="" />
         </Modal.Body>
       </Modal>

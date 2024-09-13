@@ -3,13 +3,13 @@ import Banner from './component/Banner/Banner'
 import MusicAlbum from './component/MusicAlbum/MusicAlbum';
 import MusicNewReleases from './component/MusicNewReleases/MusicNewReleases';
 import MusicPlaylist from './component/MusicPlaylist/MusicPlaylist';
-// import "./HomePage.style.css";
+import './HomePage.style.css'
 
 const HomePage = () => {
   return (
     <div>
-      <div style={{backgroundColor:"#1f1f1f",color:"white"}}>
-      홈페이지 입니다
+      <div className='hompage_container'>
+    
       <Banner/>
       <MusicPlaylist/>
       <MusicNewReleases/>

@@ -31,3 +31,14 @@
   border-bottom: 1px solid white;
   cursor: pointer;
 }
+
+.trackdetailpage_modal_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackdetailpage_modal_header {
+  border-bottom: none;
+  background: none !important;
+}

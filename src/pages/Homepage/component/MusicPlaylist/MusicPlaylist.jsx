@@ -16,7 +16,7 @@ const MusicPlaylist = () => {
   return (
     <div>
         <div>
-         {PlaylistData&& <MusicPlaylistSlide PlaylistData={PlaylistData} />}
+         {PlaylistData && <MusicPlaylistSlide PlaylistData={PlaylistData} />}
         </div>
     </div>
   )
