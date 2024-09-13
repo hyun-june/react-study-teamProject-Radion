@@ -130,12 +130,9 @@ const AlbumDetailPage = () => {
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            {album?.name}
-          </Modal.Title>
+        <Modal.Header closeButton className="albumdetailpage_modal_header">
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="albumdetailpage_modal_body">
           <img src={album?.images[0].url} alt="" />
         </Modal.Body>
       </Modal>
