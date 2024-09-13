@@ -326,7 +326,30 @@
         <div>
          <ul>
            <li>
-           </li>
+              혜정
+            </li>
+            <ol>
+              navbar 수정(링크 및 로그인 버튼)<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+               musicPlayer page css 수정<br/>
+                            playlist의 내용 보여줄 page 만들기<br/>
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              homepage css 수정<br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              detail page 수정<br/>
+            </ol>
          </ul> 
         </div>
     </details>
@@ -335,6 +358,10 @@
         <div>
           <ul>
             <li>
+              homepage 앨범 클릭시 detail page로 이동
+            </li>
+            <li>
+              page별 navigate 연결하기
             </li>
           </ul>
         </div>
