@@ -1,0 +1,18 @@
+.tracktable_play_button {
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .tracktable_play_icon {
+    display: none;
+  }
+  
+  .tracktable_row:hover .tracktable_play_icon{
+    display: block;
+    color: #1ed760;
+  }
+  
+  .tracktable_row:hover .tracktable_index_icon{
+    display: none;
+  }
