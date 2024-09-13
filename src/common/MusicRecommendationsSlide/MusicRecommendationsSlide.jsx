@@ -2,6 +2,8 @@ import React from 'react';
 import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import MusicRecommendationsCard from '../MusicCard/MusicRecommendationsCard';
+import './MusicRecommendationsSlide.style.css'
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -20,7 +22,7 @@ const MusicSlide = ({ albumData }) => {
     return (
         <>
           <Container>
-            <h2>RecommendationsMusic spotify_img 2 items 10</h2>
+            <h2 className = 'RecommendationsMusic_title'>RecommendationsMusic</h2>
             </Container>
             <Carousel
                 responsive={responsive}
@@ -31,7 +33,8 @@ const MusicSlide = ({ albumData }) => {
               >
             {albumData.tracks.map((track, index) => (
               <div key={index}>
-                <img src={track.album.images[2].url} alt={`Second Image`} />
+                {/* <img src={track.album.images[1].url} alt={`Second Image`}  style={{ width: '300px', height: '300px' }}/> */}
+                < MusicRecommendationsCard key={index} music={track}  />
                 {/* <strong>Name:</strong> {track.album.name}<br />
                 <strong>Duration:</strong> {track.duration_ms} ms<br />
                 <strong>Popularity:</strong> {track.popularity}<br /> */}

@@ -3,6 +3,7 @@ import { useMusicNewReleasestQuery } from '../../../../hooks/useMusicNewReleases
 import { Alert} from 'react-bootstrap';
 import MusicNewReleasesSlide from '../../../../common/MusicNewReleasesSlide/MusicNewReleasesSlide';
 import './MusicNewReleases.style.css';
+
 const MusicNewReleases = () => {
     const { data: NewReleasesData, isLoading, isError, error } = useMusicNewReleasestQuery();
      console.log("MusicNewReleases여기까지 왓나.", NewReleasesData);
@@ -16,7 +17,7 @@ const MusicNewReleases = () => {
         <div>
             <div >
             {NewReleasesData&&
-                <MusicNewReleasesSlide className='MusicNewReleases'NewReleasesData={NewReleasesData} />
+                <MusicNewReleasesSlide className='MusicNewReleases' NewReleasesData={NewReleasesData} />
             }
         </div>
     </div>

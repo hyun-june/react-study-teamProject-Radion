@@ -23,8 +23,8 @@ const Banner = () => {
     <div
         className='banner'
       >
-          <Container>
-         <img className="banner_img" src={PlaylistData.playlists.items[0].images[0].url} alt={`Playlist Cover`} />
+         <Container>
+          <img className="banner_img" src={PlaylistData.playlists.items[0].images[0].url} alt={`Playlist Cover`} />
          </Container>
     </div>
     </div>
