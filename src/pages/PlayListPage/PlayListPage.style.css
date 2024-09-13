@@ -1,0 +1,73 @@
+body{
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1DB954;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+}
+
+.pause-icon{
+    position: relative;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+  
+.play-button:hover {
+    background-color: #1ed760;
+    transform: scale(1.02);
+}
+
+.videoList_table:hover{
+    background-color: rgb(70, 70, 70);
+    border-radius: 10px;
+}
+  
+.videoList_table{
+    display: flex;
+}
+
+.videoList_table_title{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.playList-preview{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview_title{
+    padding-top: 2rem;
+}
+
+.musicplayer_searcharea{
+    position: absolute;
+    right: 10rem;
+    top: 5rem;
+}
+
+.musicplayer_input{
+    border-radius: 6px;
+    padding-left: 1rem;
+}
+
+.musicplayer_searchIcon{
+    position: relative;
+    right: 30px;
+    border: none;
+    background-color: white;
+}

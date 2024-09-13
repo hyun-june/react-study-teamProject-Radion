@@ -2,6 +2,7 @@ import React from 'react'
 import { usePlaylistQuery} from '../../../../hooks/usePlaylists';
 import { Alert } from 'react-bootstrap';
 import MusicPlaylistSlide from '../../../../common/MusicPlaylistSlide/MusicPlaylistSlide';
+
 const MusicPlaylist = () => {
     const { data: PlaylistData, isLoading, isError, error } =  usePlaylistQuery();
     console.log("PlaylistData", PlaylistData);

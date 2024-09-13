@@ -23,7 +23,7 @@ const fetchPlaylist= async () => {
 
 export const usePlaylistQuery = () => {
     return useQuery({
-        queryKey: ['Music-Platlist'],
-        queryFn: fetchPlaylist,
+        queryKey: ['Music-Playlist'],
+        queryFn: fetchPlaylist
     });
 };
