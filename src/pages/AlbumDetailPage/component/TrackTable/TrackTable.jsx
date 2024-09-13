@@ -2,11 +2,12 @@ import React from "react";
 import "./TrackTable.style.css";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import TrackAudioButton from "../TrackAudioButton/TrackAudioButton";
 
 const TrackTable = ({ album }) => {
   const navigate = useNavigate();
 
-  const toTracketailPage = (id, event) => {
+  const toTrackDetailPage = (id, event) => {
     event.preventDefault();
     navigate(`/tracks/${id}`);
 
@@ -27,12 +28,14 @@ const TrackTable = ({ album }) => {
         const s = Math.floor(duration / 1000 - m * 60);
         return (
           <Row key={index + 1} className="tracktable_row">
-            <Col lg="1" className="tracktable_center">{index + 1}</Col>
+            <Col lg="1" className="tracktable_center">
+              <TrackAudioButton preview={newAlbum?.preview_url} index={index + 1}/>
+            </Col>
 
             <Col lg="10" className="mb-2">
               <Row>
                 <div>
-                  <span className="tracktable_title" onClick={(event) => toTracketailPage(newAlbum?.id,event)}>{newAlbum?.name}</span>
+                  <span className="tracktable_title" onClick={(event) => toTrackDetailPage(newAlbum?.id,event)}>{newAlbum?.name}</span>
                 </div>
               </Row>
               <div>

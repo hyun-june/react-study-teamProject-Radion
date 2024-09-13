@@ -5,7 +5,7 @@ import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
 import { Alert, Button, Col, Container, Modal, Row } from "react-bootstrap";
 import TrackTable from "./component/TrackTable/TrackTable";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
-import AudioPlayerButton from "../../common/component/AudioPlayerButton";
+import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
 
 const AlbumDetailPage = () => {
   // TODO. useParams 쓰는걸로 바꿔야 함.
