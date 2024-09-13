@@ -1,0 +1,27 @@
+.img-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img-container img {
+    transition: transform 0.2s;
+  }
+  
+  .img-container img:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  /* MusicCard.style.css */
+
+.music-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.music-card img {
+  transition: transform 0.3s;
+}
+
+.music-card:hover img {
+  transform: scale(1.2); /* Increase the scale factor as needed */
+}

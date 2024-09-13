@@ -3,7 +3,7 @@ import Banner from './component/Banner/Banner'
 import MusicAlbum from './component/MusicAlbum/MusicAlbum';
 import MusicNewReleases from './component/MusicNewReleases/MusicNewReleases';
 import MusicPlaylist from './component/MusicPlaylist/MusicPlaylist';
-
+import './HomePage.style.css'
 
 const HomePage = () => {
   // const{
@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <div>
       <div className='hompage_container'>
-      홈페이지 입니다
+    
       <Banner/>
       <MusicPlaylist/>
       <MusicNewReleases/>
