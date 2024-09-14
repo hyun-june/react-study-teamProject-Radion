@@ -409,7 +409,38 @@
         <div>
           <ul>
             <li>
+              혜정
+            </li>
+            <ol>
+               private route 적용<br/>
+            </ol>
+            <li>
+              현준
+            </li>
+            <ol>
+               하드 코딩 된 list img, title 수정<br/>
+            </ol>
+            <li>
+              희명
+            </li>
+            <ol>
+              homepage 슬라이드 css 수정<br/>
+              발표 준비<br/>
+            </ol>
+            <li>
+              정찬
+            </li>
+            <ol>
+              detail page 내용 추가<br/>
+            </ol>
+           <li>
+             homepage 앨범 클릭시 detail page로 이동<br/>
+           </li>
+            <li>
               반응형 css 적용하기<br/>
+            </li>
+            <li>
+              발표 스크립트 보내기<br/>
             </li>
           </ul>
         </div>
