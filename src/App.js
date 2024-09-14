@@ -26,8 +26,10 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />{" "}
             {/* <Route path="music" element={<MusicPlayer/>}/> */}
-            <Route path="playlist" element={<PlayListPage/>}/>
-            <Route path="list" element={<TrackListPage/>}/>
+            <Route path="music" element={<PlayListPage/>}/>
+            <Route path="list">
+              <Route path=":id" element={<TrackListPage/>}/>
+            </Route>
             <Route
               path="login"
               element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
