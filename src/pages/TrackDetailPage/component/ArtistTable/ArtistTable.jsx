@@ -26,10 +26,10 @@ const ArtistList = ({artists}) => {
       return (
 
         <Row key={index} className='mt-3 artisttable_row'>
-          <Col lg="2">
+          <Col lg="2" md="2" sm="3" xs="3">
             <img className='artistList_profile' src={artist?.images[2]?.url || `${process.env.PUBLIC_URL}/noImage.png`} alt=''></img>
           </Col>
-          <Col lg="auto" className='artistList_row'>
+          <Col lg="auto" md="auto" sm="auto" xs="auto" className='artistList_row'>
             <div>
               <Row><div>Artist</div></Row>
               <Row><div><span className='artisttable_artist_name'>{artist?.name}</span></div></Row>

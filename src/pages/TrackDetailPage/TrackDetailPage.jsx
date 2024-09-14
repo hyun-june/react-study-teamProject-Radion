@@ -5,6 +5,8 @@ import { Alert, Col, Container, Modal, Row } from "react-bootstrap";
 import { useTrackDetailQuery } from './../../hooks/useTrackDetail';
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
 import ArtistTable from "./component/ArtistTable/ArtistTable";
+import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
+import TrackBox from "../../common/component/TrackBox/TrackBox";
 
 const TrackDetailPage = () => {
   // const id = "4twllsTUoTAFxiVeq3bNjq";
@@ -29,14 +31,25 @@ const TrackDetailPage = () => {
       setArtistName(track.artists[0].name);
     }
   }, [track]);
+
+  const {
+    data: artistAlbum,
+    isLoading: aAIsLoading,
+    isError: aAIsError,
+    error: aAError,
+  } = useArtistAlbumQuery(artistId);
  
   console.log(track);
 
-  if (isLoading) {
+  if (isLoading || aAIsLoading) {
     return <h1>Loading...</h1>;
   }
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;
+  }
+
+  if (aAIsError) {
+    return <Alert variant="danger">{aAError.message}</Alert>;
   }
 
   const duration = track?.duration_ms;
@@ -47,7 +60,7 @@ const TrackDetailPage = () => {
     <div className="trackdetailpage_body">
       <Container>
         <Row>
-          <Col>
+          <Col lg="4" md="6" sm="12" xs="12">
             <img
               className="trackdetailpage_poster"
               src={track?.album.images[1].url}
@@ -55,7 +68,7 @@ const TrackDetailPage = () => {
               onClick={() => setLgShow(true)}
             />
           </Col>
-          <Col>
+          <Col lg="8" md="6" sm="12" xs="12">
             <Row className="trackdetailpage_type mt-4">
               <div>Track</div>
             </Row>
@@ -85,18 +98,8 @@ const TrackDetailPage = () => {
 
         <Row><div className="trackdetailpage_more_albums mt-5">Watch more of {artistName}'s songs</div></Row>
         <Row>
-          {/* <Col>
-            <img src={artistAlbum?.items[0].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[0].name}</div>
-          </Col>
-          <Col>
-            <img src={artistAlbum?.items[1].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[1].name}</div>
-          </Col>
-          <Col>
-            <img src={artistAlbum?.items[2].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[2].name}</div>
-          </Col> */}
+          <TrackBox data={artistAlbum?.items}/>
+          
         </Row>
 
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./AlbumDetailPage.style.css";
 import { useParams } from "react-router-dom";
 import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
-import { Alert, Button, Col, Container, Modal, Row } from "react-bootstrap";
+import { Alert, Col, Container, Modal, Row } from "react-bootstrap";
 import TrackTable from "./component/TrackTable/TrackTable";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
@@ -55,7 +55,7 @@ const AlbumDetailPage = () => {
     <div className="albumdetailpage_body">
       <Container>
         <Row>
-          <Col>
+          <Col  lg="4" md="6" sm="12" xs="12">
             <img
               className="albumdetailpage_poster"
               src={album?.images[1].url}
@@ -63,7 +63,7 @@ const AlbumDetailPage = () => {
               onClick={() => setLgShow(true)}
             />
           </Col>
-          <Col>
+          <Col  lg="4" md="6" sm="12" xs="12">
             <Row className="albumdetailpage_type mt-4">
             <div>Album</div>
               {/* <div>{album?.album_type.charAt(0).toUpperCase() + album?.album_type.slice(1)}</div> */}
