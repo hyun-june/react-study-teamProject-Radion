@@ -1,4 +1,4 @@
-.trackaudiobutton_play_button {
+  .trackaudiobutton_play_button {
     background: none;
     border: none;
     color: white;
@@ -29,4 +29,14 @@
   .trackaudiobutton_pause-icon{
     position: relative;
     margin-top: 4px;
-}
+  }
+
+  .trackaudiobutton_x {
+    color: gray;
+    position: relative;
+    right: 3px;
+  }
+
+  .trackaudiobutton_x:hover {
+    color: rgb(150, 0, 0);
+  }

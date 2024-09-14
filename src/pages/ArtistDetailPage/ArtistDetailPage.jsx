@@ -7,6 +7,7 @@ import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPla
 import { useArtistAlbumQuery } from './../../hooks/useArtistAlbum';
 import { useArtistTopTracksQuery } from './../../hooks/useArtistTopTracks';
 import { useParams } from "react-router-dom";
+import PopularTrackTable from "./component/PopularTrackTable/PopularTrackTable";
 
 const ArtistDetailPage = () => {
   const { id } = useParams();
@@ -39,6 +40,7 @@ const ArtistDetailPage = () => {
     if (artist?.name) {
       setArtistName(artist?.name);
     }
+    setI(0)
   }, [artist]);
 
   useEffect(() => {
@@ -58,7 +60,6 @@ const ArtistDetailPage = () => {
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;
   }
-  console.log(artistTopTracks);
 
   return (
     <Container>
@@ -79,11 +80,18 @@ const ArtistDetailPage = () => {
 
         </div>
       </Row>
+
       <Row>
-          <Col className="mt-3">
-            <AudioPlayerButton preview={artistTopTracks?.tracks[i].preview_url}/>
-          </Col>
-        </Row>
+        <Col className="mt-3">
+          <AudioPlayerButton preview={artistTopTracks?.tracks[i]?.preview_url}/>
+        </Col>
+      </Row>
+
+      <Row className="mt-4">
+        <div className="artistdetailpage_popular_txt">인기</div>
+      </Row>
+
+      <PopularTrackTable tracks={artistTopTracks?.tracks}/>
     </Container>
   );
 };

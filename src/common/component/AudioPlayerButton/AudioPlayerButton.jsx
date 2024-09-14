@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./AudioPlayerButton.style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPause, faPlay, faX } from "@fortawesome/free-solid-svg-icons";
 
 const AudioPlayerButton = ({preview}) => {
   const audioRef = useRef(null);
@@ -19,14 +19,25 @@ const AudioPlayerButton = ({preview}) => {
   };
 
   return (
-    <div>
-      <button className="play-button me-3" onClick={handlePlay}>
-        <span className="play-icon">{isPlaying ? <FontAwesomeIcon className='pause-icon' icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}</span>
-      </button>
+    <>
+      {preview
+      ?
+      <>
+        <button className="play-button me-3" onClick={handlePlay}>
+          <span className="play-icon">{isPlaying ? <FontAwesomeIcon className='pause-icon' icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}</span>
+        </button>
 
-      <audio ref={audioRef} src={preview} />
-      
-    </div>
+        <audio ref={audioRef} src={preview} />
+        
+      </>
+      :
+      <>
+        <button className="play-button me-3">
+          <span className="play-icon"><FontAwesomeIcon icon={faX} className='trackaudiobutton_x'/></span>
+        </button>
+      </>
+      }
+    </>
   );
 };
 

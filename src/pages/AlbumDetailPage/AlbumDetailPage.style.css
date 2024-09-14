@@ -10,7 +10,7 @@
 
 .albumdetailpage_title > div {
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 4vw;
 }
 
 .albumdetailpage_poster {
@@ -46,4 +46,10 @@
   .albumdetailpage_modal_header {
     border-bottom: none;
     background: none !important;
+  }
+
+  @media (min-width: 992px) {
+    .albumdetailpage_title > div {
+      font-size: 3rem; /* 최대 폰트 크기 */
+    }
   }
