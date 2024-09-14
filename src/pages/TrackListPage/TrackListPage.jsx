@@ -19,7 +19,7 @@ const TrackListPage = () => {
       <Container>
         <Row>
           <Col className='playList-preview'>
-            <img width={500} src={secondImage}/>
+            <img className='playlist_preview_img' src={secondImage}/>
             <h5 className='preview_title'>{playlistName}</h5>
           </Col>
         </Row>

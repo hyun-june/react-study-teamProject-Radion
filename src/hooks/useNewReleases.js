@@ -9,6 +9,6 @@ export const useNewReleasesAlbums = () =>{
     return useQuery({
         queryKey:[`newAlbums`],
         queryFn:()=>fetchNewAlbums(),
-        select:(result)=>result.data.albums.items
+        select:(result)=>result.data.albums
     })
 }

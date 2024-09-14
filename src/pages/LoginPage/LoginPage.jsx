@@ -29,7 +29,7 @@ const Login = () => {
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       const accessToken = tokenResponse.access_token;
-      console.log("Access Token:", accessToken);
+      // console.log("Access Token:", accessToken);
 
       // 사용자 프로필 정보 가져오기
       try {
@@ -42,7 +42,7 @@ const Login = () => {
           }
         );
         const userProfile = userProfileResponse.data;
-        console.log("User Profile:", userProfile);
+        // console.log("User Profile:", userProfile);
 
         // 사용자 정보 저장 (로컬 스토리지)
         localStorage.setItem("user", JSON.stringify(userProfile));
