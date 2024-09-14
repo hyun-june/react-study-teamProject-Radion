@@ -8,9 +8,9 @@ import ArtistTable from "./component/ArtistTable/ArtistTable";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
 import TrackBox from "../../common/component/TrackBox/TrackBox";
 
-const TrackDetailPage = () => {
+const TrackDetailPage = ({id}) => {
   // const id = "4twllsTUoTAFxiVeq3bNjq";
-  const { id } = useParams();
+  // const { id } = useParams();
   const navigate = useNavigate();
 
   const [lgShow, setLgShow] = useState(false);

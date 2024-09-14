@@ -2,12 +2,13 @@
 
 .navbar {
   font-family: "Ubuntu", sans-serif;
-  padding-top: 0.15em;
+  padding-top: 0.1em;
   padding-bottom: 0.1em;
   font-size: 1.7em;
   background-color: black !important;
 }
 
+.navbar_logo_desktop,
 .navbar_logo {
   display: flex;
   align-items: center;
@@ -157,7 +158,9 @@
   .navbar_playlist_link,
   .navbar_user_info,
   .navbar_login_btn,
-  .navbar_logout_btn {
+  .navbar_logout_btn,
+  .navbar_logo_desktop,
+  .desktop-toggle {
     display: none;
   }
 
@@ -167,6 +170,10 @@
 
   .nav-link {
     font-size: 0.8em;
+  }
+
+  .navbar {
+    padding-top: 0;
   }
 }
 
@@ -182,12 +189,13 @@
   .d-none {
     display: none !important;
   }
-  .hamburger_menu_login_link {
+  .hamburger_menu_login_link,
+  .mobile-user-info {
     display: none;
   }
 }
 
-/* 햄버거 아이콘*/
+/* 햄버거 아이콘 관련 스타일링*/
 .custom-toggle {
   color: white;
   border-color: white;
@@ -197,8 +205,19 @@
   padding-bottom: 5px;
 }
 
-/* .navbar .navbar-collapse {
+/* 모바일사이즈일 유저네임 햄버거버튼 옆에 보이게하기(여기서부터 제일밑)*/
+.mobile-nav-container {
   display: flex;
-  flex: 1;
-  justify-content: center;
-} */
+  align-items: center;
+  justify-content: space-between; /*Space between logo, user info, and toggl*/
+  width: 100%;
+}
+
+/* Style for mobile user info to position next to the hamburger icon */
+.mobile-user-info {
+  color: white;
+  font-size: 0.7em;
+  margin-left: 3.2em; /* Adjust as needed */
+  white-space: nowrap;
+  text-align: end;
+}
