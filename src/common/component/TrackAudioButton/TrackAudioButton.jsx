@@ -32,7 +32,8 @@ const TrackAudioButton = ({preview, index}) => {
       :
       <>
         <button className="trackaudiobutton_play_button">
-          <FontAwesomeIcon icon={faX} className='trackaudiobutton_x'/>
+          <FontAwesomeIcon icon={faX} className='trackaudiobutton_x trackaudiobutton_play_icon'/>
+          <span className="trackaudiobutton_index_icon">{index}</span>
         </button>
       </>}
         

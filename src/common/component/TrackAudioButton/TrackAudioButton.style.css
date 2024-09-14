@@ -32,11 +32,11 @@
   }
 
   .trackaudiobutton_x {
-    color: gray;
+    color: rgb(150, 0, 0) !important;
     position: relative;
     right: 3px;
   }
 
   .trackaudiobutton_x:hover {
-    color: rgb(150, 0, 0);
+    color: rgb(150, 0, 0) !important;
   }
