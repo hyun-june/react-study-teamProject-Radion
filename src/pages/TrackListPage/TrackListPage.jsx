@@ -3,13 +3,15 @@ import { Col, Container, Row } from 'react-bootstrap'
 import './TrackListPage.style.css'
 import { usePlayListItems } from '../../hooks/usePlayListItems'
 import TrackListTable from './TrackListTable/TrackListTable'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 const TrackListPage = () => {
     const {id} = useParams();
     const {data} = usePlayListItems({id});
-    const trackList = data ? data.slice(0, 9) : [];
-    console.log("11",trackList)
+    const trackList = data ? data.slice(0, 20) : [];
+    const location = useLocation();
+    const secondImage = location.state?.secondImage;
+    const playlistName = location.state?.playlistName;
     const index = 0;
 
   return (
@@ -17,8 +19,8 @@ const TrackListPage = () => {
       <Container>
         <Row>
           <Col className='playList-preview'>
-            <img width={500} src="https://news.samsungdisplay.com/wp-content/uploads/2018/08/8.jpg"/>
-            <h5 className='preview_title'>[PLAY LIST] l 지금 몇시야? 해쉬? 해쉬스완(Hash Swan) 노래모음 l</h5>
+            <img width={500} src={secondImage}/>
+            <h5 className='preview_title'>{playlistName}</h5>
           </Col>
         </Row>
         <Row>

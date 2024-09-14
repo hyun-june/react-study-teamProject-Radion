@@ -37,7 +37,7 @@ const MusicPlaylistSlide = ({ PlaylistData }) => {
               itemClass = "movie-slider p-1"
              >
                 {PlaylistData.playlists.items.map((playlist, index)  => (
-                        <MusicPlaylistCard playlist={playlist} key={index} />
+                    <MusicPlaylistCard playlist={playlist} key={index} />
                 ))}
            </Carousel>
     </div>

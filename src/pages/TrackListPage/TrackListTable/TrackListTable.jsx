@@ -7,14 +7,13 @@ import TrackAudioButton from "../../../common/component/TrackAudioButton/TrackAu
 
 const TrackListTable = ({ trackList }) => {
   const navigate = useNavigate();
-  const visibleItems = 10;
+  const visibleItems = 20;
 
   const toTrackDetailPage = (id, event) => {
     event.preventDefault();
     navigate(`/tracks/${id}`);
-
   }
-  
+
   return (
     <>
       <Row className="mt-5">

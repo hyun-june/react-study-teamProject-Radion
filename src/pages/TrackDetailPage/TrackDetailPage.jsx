@@ -20,7 +20,6 @@ const TrackDetailPage = () => {
   const toArtistDetailPage = (id, event) => {
     event.preventDefault();
     navigate(`/artists/${id}`);
-
   }
 
   const {
