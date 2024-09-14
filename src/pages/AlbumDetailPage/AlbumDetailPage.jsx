@@ -9,9 +9,10 @@ import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPla
 
 const AlbumDetailPage = () => {
   // TODO. useParams 쓰는걸로 바꿔야 함.
-  const id = "5V8n6fqyAPxvFTibPhQVcp";
-  // const { id } = useParams();
+  // const id = "5V8n6fqyAPxvFTibPhQVcp";
+   const { id } = useParams();
   // const navigate = useNavigate();
+  
 
   const [lgShow, setLgShow] = useState(false);
   const [artistId, setArtistId] = useState(null);
@@ -39,7 +40,7 @@ const AlbumDetailPage = () => {
     error: aAError,
   } = useArtistAlbumQuery(artistId);
  
-  console.log(album);
+  // console.log(album);
 
   if (isLoading || aAIsLoading) {
     return <h1>Loading...</h1>;

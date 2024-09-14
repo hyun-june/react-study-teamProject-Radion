@@ -6,9 +6,9 @@ import { useTrackDetailQuery } from './../../hooks/useTrackDetail';
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
 import ArtistTable from "./component/ArtistTable/ArtistTable";
 
-const TrackDetailPage = () => {
+const TrackDetailPage = ({id}) => {
   // const id = "4twllsTUoTAFxiVeq3bNjq";
-  const { id } = useParams();
+  // const { id } = useParams();
   const navigate = useNavigate();
 
   const [lgShow, setLgShow] = useState(false);

@@ -6,7 +6,7 @@ import './MusicNewReleases.style.css';
 
 const MusicNewReleases = () => {
     const { data: NewReleasesData, isLoading, isError, error } = useMusicNewReleasestQuery();
-     console.log("MusicNewReleases여기까지 왓나.", NewReleasesData);
+    //  console.log("MusicNewReleases여기까지 왓나.", NewReleasesData);
      if(isLoading){
         return <h1>Loading...</h1>
       }

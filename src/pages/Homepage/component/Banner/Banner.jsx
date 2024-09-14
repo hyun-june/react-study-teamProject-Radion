@@ -7,7 +7,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 const Banner = () => {
   const { data: PlaylistData, isLoading, isError, error } = usePlaylistQuery();
-  console.log("이게 베너다", PlaylistData);
+  // console.log("이게 베너다", PlaylistData);
 
   if (isLoading) {
       return <h1>Loading...</h1>;
