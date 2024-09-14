@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+.musicRecommendations-card {
+    margin-top: 2em;
+    height: 450px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+
+.musicRecommendations-card img
+{
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+    border-radius: 55px;
+    transition: transform 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.musicRecommendations-card-image:hover {
+    transform: scale(1.2);
+    z-index: 999;
+}
+@media screen and (max-width: 1850px){
+    .musicRecommendations-card {
+      margin-top: 1em;
+      height: 350px;
+    }
+  
+    .musicRecommendations-card img {
+      height: 220px;
+      width: 220px;
+    }
+  }
+  @media screen and (max-width: 1350px){
+    .musicRecommendations-card {
+      margin-top: 1em;
+      height: 350px;
+    }
+  
+    .musicRecommendations-card img {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .musicRecommendations-card {
+      margin-top: 1em;
+      height: 350px;
+    }
+  
+    .musicRecommendations-card img {
+      height: 220px;
+      width: 220px;
+    }
+  }
+@media screen and (max-width: 768px) {
+    .musicRecommendations-card {
+      margin-top: 1em;
+      height: 350px;
+      cursor: pointer;
+      transition: 0.5s;
+      position: relative;
+    }
+    .musicRecommendations img {
+      height: 220px;
+      width: 220px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      position: relative;
+
+    }
+
+    .musicRecommendations img:hover {
+      transform: scale(1.2);
+      z-index: 999;
+    }
+  
+  }

@@ -24,7 +24,7 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
     <div>
          <div>
          <Container>
-            <h2 className='NewReleasest_title'>New Releasest</h2>
+            <h2 className='NewReleasest_title'>New Releases</h2>
         </Container>
          <Carousel
               responsive={responsive}
@@ -37,7 +37,7 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
                   // <div key={index} className= "MusicNewReleases_image-card"  style={{ width: '300px', height: '300px' }}>
                   //     <img src={item.images[0].url} alt={item.name} />
                   // </div>
-                  <MovieCard className= "MusicNewReleases_image-card"  key={index} music={item} />
+                  <MovieCard   key={index} music={item} />
               ))}
           </Carousel>
         </div>

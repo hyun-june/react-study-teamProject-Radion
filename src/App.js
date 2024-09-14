@@ -30,7 +30,9 @@ function App() {
               // element={!isAuthenticated ? <LoginPage /> : <PlayListPage />
               element={<PlayListPage />}
             />
-            <Route path="list" element={<TrackListPage />} />
+            <Route path="list">
+              <Route path=":id" element={<TrackListPage />} />
+            </Route>
             <Route
               path="login"
               /* 로그인 여부에 따라 페이지 렌더링 */
