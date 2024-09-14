@@ -94,23 +94,45 @@ console.log(selectedVideo)
           </button>
         </div>
         <Row>
-          <Col className='playList-preview'>
-            {selectedVideo? <img width={500} src={selectedVideo.snippet.thumbnails.high.url}/> : ""}
+        <Col className='playList-preview'>
+            {selectedVideo ? (
+              <div className='preview_video mb-3 mt-3'>
+              <ReactPlayer
+              url={playerUrl}
+              playing={playing} // 자동 재생
+              volume={0.5} // 볼륨 설정
+              controls={false} // 비디오 컨트롤러 숨기기
+              width="100%" // 비디오의 너비를 0으로 설정
+              height="100%" // 비디오의 높이를 0으로 설정
+              config={{
+                youtube: {
+                  playerVars: { 
+                    modestbranding: 1, // 최소한의 브랜딩
+                    controls: 0, // 컨트롤 숨기기
+                    playsinline: 1, // 인라인 재생
+                    disablekb: 1, // 키보드 컨트롤 비활성화
+                    rel: 0, // 관련 동영상 비활성화
+                    showinfo: 0, // 정보 표시 숨김
+                  }
+                }
+              }}
+            /></div>
+            ) : ""}
             <h5 className='preview_title'>{selectedVideo?.snippet?.title}</h5>
           </Col>
         </Row>
         <Row>
-          <Col>
-            <button className='play-button' onClick={musicPlay}>
+        <Col>
+          {selectedVideo? <button className='play-button' onClick={musicPlay}>
               <span className="play-icon">{playing ? <FontAwesomeIcon className='pause-icon' icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}</span>
-            </button>
+            </button> : ""}
           </Col>
         </Row>
 
-        <Row className="mt-5 ">
-          <Col lg="1" className="tracktable_center">#</Col>
-          <Col lg="1">Title</Col>
-          <Col lg="9"></Col>
+        <Row className="mt-3 playlist_table">
+          <Col lg="1" xs={1} className="tracktable_center">#</Col>
+          <Col lg="1" xs={1}>Title</Col>
+          <Col lg="8"></Col>
           <hr />
           <Row className="video_list_row">
             <div className='video-list'>
@@ -124,24 +146,6 @@ console.log(selectedVideo)
           </Row>
         </Row>
       </Container>
-
-      <ReactPlayer
-        url={playerUrl}
-        playing={playing} // 자동 재생
-        volume={0.5} // 볼륨 설정
-        controls={false} // 비디오 컨트롤러 숨기기
-        width="0" // 비디오의 너비를 0으로 설정
-        height="0" // 비디오의 높이를 0으로 설정
-        config={{
-          youtube: {
-            playerVars: { 
-              modestbranding: 1, // 최소한의 브랜딩
-              controls: 0, // 컨트롤 숨기기
-              playsinline: 1, // 인라인 재생
-            }
-          }
-        }}
-      />
     </div>
   );
 };
