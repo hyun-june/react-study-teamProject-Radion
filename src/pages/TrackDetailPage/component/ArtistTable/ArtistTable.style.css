@@ -8,6 +8,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
+}
+
+.artisttable_row {
+  padding: 10px;
 }
 
 .artisttable_row:hover {

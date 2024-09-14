@@ -16,3 +16,8 @@
   .tracktable_row:hover .tracktable_index_icon{
     display: none;
   }
+
+  .tracktable_pause-icon{
+    position: relative;
+    margin-top: 4px;
+}

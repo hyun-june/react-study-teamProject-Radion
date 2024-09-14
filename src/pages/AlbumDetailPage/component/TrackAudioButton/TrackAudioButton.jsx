@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react'
 import "./TrackAudioButton.style.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const TrackAudioButton = ({preview, index}) => {
     const audioRef = useRef(null);
@@ -19,8 +21,8 @@ const TrackAudioButton = ({preview, index}) => {
     return (
       <>
         <button className="tracktable_play_button" onClick={handlePlay}>
-            <span className="tracktable_play_icon">{isPlaying ? "||" : "▶"}</span>
-            <span className="tracktable_index_icon">{index}</span>
+          <span className="tracktable_play_icon">{isPlaying ? <FontAwesomeIcon className='tracktable_pause-icon' icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}</span>
+          <span className="tracktable_index_icon">{index}</span>
         </button>
         <audio ref={audioRef} src={preview} />
       </>

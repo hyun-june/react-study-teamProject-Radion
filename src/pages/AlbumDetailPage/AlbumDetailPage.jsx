@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./AlbumDetailPage.style.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
 import { Alert, Button, Col, Container, Modal, Row } from "react-bootstrap";
 import TrackTable from "./component/TrackTable/TrackTable";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
+import TrackBox from "../../common/component/TrackBox/TrackBox";
 
 const AlbumDetailPage = () => {
   // TODO. useParams 쓰는걸로 바꿔야 함.
   const id = "5V8n6fqyAPxvFTibPhQVcp";
   // const { id } = useParams();
-  // const navigate = useNavigate();
 
   const [lgShow, setLgShow] = useState(false);
   const [artistId, setArtistId] = useState(null);
@@ -50,6 +50,7 @@ const AlbumDetailPage = () => {
   if (aAIsError) {
     return <Alert variant="danger">{aAError.message}</Alert>;
   }
+  console.log(album)
   return (
     <div className="albumdetailpage_body">
       <Container>
@@ -95,18 +96,8 @@ const AlbumDetailPage = () => {
 
         <Row><div className="albumdetailpage_more_albums mt-5">Watch more of {artistName}'s songs</div></Row>
         <Row>
-          <Col>
-            <img src={artistAlbum?.items[0].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[0].name}</div>
-          </Col>
-          <Col>
-            <img src={artistAlbum?.items[1].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[1].name}</div>
-          </Col>
-          <Col>
-            <img src={artistAlbum?.items[2].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[2].name}</div>
-          </Col>
+          <TrackBox data={artistAlbum?.items}/>
+          
         </Row>
 
 
