@@ -38,7 +38,7 @@
 
 ## API
 - spotify API
-- youtube data v3 api
+- youtube data api v3
 <br/><br/>
 ## 스탠드업 미팅
 - 21:30분
