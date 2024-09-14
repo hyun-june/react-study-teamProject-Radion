@@ -17,6 +17,12 @@ const TrackDetailPage = () => {
   const [artistId, setArtistId] = useState(null);
   const [artistName, setArtistName] = useState(null);
 
+  const toArtistDetailPage = (id, event) => {
+    event.preventDefault();
+    navigate(`/artists/${id}`);
+
+  }
+
   const {
     data: track,
     isLoading,
@@ -78,7 +84,7 @@ const TrackDetailPage = () => {
             <Row>
               <Col>
                 <div>
-                  <span className="trackdetailpage_artistName">{artistName}</span> • <span>{track?.album.release_date.slice(0, 4)}</span> • <span>{m}:{s}</span>
+                  <span className="trackdetailpage_artistName" onClick={(event) => toArtistDetailPage(artistId,event)}>{artistName}</span> • <span>{track?.album.release_date.slice(0, 4)}</span> • <span>{m}:{s}</span>
                 </div>
               </Col>
             </Row>
@@ -95,8 +101,8 @@ const TrackDetailPage = () => {
           <ArtistTable artists={track?.artists}/>
         </div>
 
-
-        <Row><div className="trackdetailpage_more_albums mt-5">Watch more of {artistName}'s songs</div></Row>
+        <Row><div className="mt-5"><span className="trackdetailpage_more_albums" onClick={(event) => toArtistDetailPage(artistId,event)}>Watch more of {artistName}'s songs</span></div></Row>
+        
         <Row>
           <TrackBox data={artistAlbum?.items}/>
           

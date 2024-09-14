@@ -3,6 +3,7 @@
   height: auto;
   text-align: center;
   padding: 5px;
+  z-index: 2;
 }
 
 .trackcard_card:hover {
@@ -19,6 +20,7 @@
 
 .trackcard_artist {
   color: rgb(158, 154, 154);
+  z-index: 3;
 }
 
 .trackcard_artist:hover {

@@ -8,6 +8,11 @@ const TrackCard = ({track}) => {
     event.preventDefault();
     navigate(`/albums/${id}`);
   };
+  const toArtistDetailPage = (id, event) => {
+    event.preventDefault();
+    event.stopPropagation(); // 부모로 이벤트 전파 X
+    navigate(`/artists/${id}`);
+  }
   return (
     <div className='trackcard_card' onClick={(event) => toMovieTrackPage(track.id,event)}>
       <div className='trackcard_wrapper'>
@@ -16,7 +21,7 @@ const TrackCard = ({track}) => {
       <div>{track?.name}</div>
       <div>{track?.artists.map((artist, index)=>{
         return (
-          <span key={index} className='me-2 trackcard_artist'>{artist.name}</span>
+          <span key={index} className='me-2 trackcard_artist' onClick={(event) => toArtistDetailPage(artist?.id, event)}>{artist.name}</span>
         );
       })}</div>
     </div>

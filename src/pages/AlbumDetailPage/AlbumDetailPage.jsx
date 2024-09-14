@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AlbumDetailPage.style.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
 import { Alert, Col, Container, Modal, Row } from "react-bootstrap";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
@@ -12,10 +12,17 @@ const AlbumDetailPage = () => {
   // TODO. useParams 쓰는걸로 바꿔야 함.
   const id = "5V8n6fqyAPxvFTibPhQVcp";
   // const { id } = useParams();
+  const navigate = useNavigate();
 
   const [lgShow, setLgShow] = useState(false);
   const [artistId, setArtistId] = useState(null);
   const [artistName, setArtistName] = useState(null);
+
+  const toArtistDetailPage = (id, event) => {
+    event.preventDefault();
+    navigate(`/artists/${id}`);
+
+  }
 
   const {
     data: album,
@@ -38,8 +45,6 @@ const AlbumDetailPage = () => {
     isError: aAIsError,
     error: aAError,
   } = useArtistAlbumQuery(artistId);
- 
-  console.log(album);
 
   if (isLoading || aAIsLoading) {
     return <h1>Loading...</h1>;
@@ -50,7 +55,7 @@ const AlbumDetailPage = () => {
   if (aAIsError) {
     return <Alert variant="danger">{aAError.message}</Alert>;
   }
-  console.log(album)
+
   return (
     <div className="albumdetailpage_body">
       <Container>
@@ -74,7 +79,7 @@ const AlbumDetailPage = () => {
             <Row>
               <Col>
                 <div>
-                  <span className="albumdetailpage_artistName">{artistName}</span> • <span>{album?.release_date.slice(0, 4)}</span>
+                  <span className="albumdetailpage_artistName" onClick={(event) => toArtistDetailPage(artistId,event)}>{artistName}</span> • <span>{album?.release_date.slice(0, 4)}</span>
                 </div>
               </Col>
             </Row>
@@ -94,7 +99,7 @@ const AlbumDetailPage = () => {
 
 
 
-        <Row><div className="albumdetailpage_more_albums mt-5">Watch more of {artistName}'s songs</div></Row>
+        <Row><div className="mt-5"><span className="albumdetailpage_more_albums" onClick={(event) => toArtistDetailPage(artistId,event)}>Watch more of {artistName}'s songs</span></div></Row>
         <Row>
           <TrackBox data={artistAlbum?.items}/>
           

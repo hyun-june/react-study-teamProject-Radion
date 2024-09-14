@@ -6,9 +6,10 @@ import { useArtistDetailQuery } from './../../hooks/useArtistDetail';
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
 import { useArtistAlbumQuery } from './../../hooks/useArtistAlbum';
 import { useArtistTopTracksQuery } from './../../hooks/useArtistTopTracks';
+import { useParams } from "react-router-dom";
 
 const ArtistDetailPage = () => {
-  const id = '6HaGTQPmzraVmaVxvz6EUc';
+  const { id } = useParams();
 
   const [artistName, setArtistName] = useState(null);
   const [i, setI] = useState(0);

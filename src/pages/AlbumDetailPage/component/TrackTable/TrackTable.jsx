@@ -14,6 +14,12 @@ const TrackTable = ({ album }) => {
 
   }
 
+  const toArtistDetailPage = (id, event) => {
+    event.preventDefault();
+    navigate(`/artists/${id}`);
+
+  }
+
   return (
     <>
       <Row className="mt-5">
@@ -42,7 +48,7 @@ const TrackTable = ({ album }) => {
               <div>
                 {newAlbum?.artists.map((artist, index) => {
                   return (
-                    <span className="tracktable_artist_name" key={index}>{artist?.name}</span>
+                    <span className="tracktable_artist_name" key={index} onClick={(event) => toArtistDetailPage(artist?.id, event)}>{artist?.name}</span>
                   );
                 })}
               </div>
