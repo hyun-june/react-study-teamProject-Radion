@@ -11,8 +11,6 @@ import AlbumDetailPage from "./pages/AlbumDetailPage/AlbumDetailPage";
 import TrackDetailPage from "./pages/TrackDetailPage/TrackDetailPage";
 import MusicPlayer from "./common/MusicPlayer/MusicPlayer";
 import { UserContextProvider } from "./context/UserContext";
-// import PrivateRoute from "./route/PrivateRoute";
-import PrivateRoute from "./route/PrivateRoute";
 import PlayListPage from "./pages/PlayListPage/PlayListPage.jsx";
 import TrackListPage from "./pages/TrackListPage/TrackListPage.jsx";
 
@@ -26,18 +24,34 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />{" "}
             {/* <Route path="music" element={<MusicPlayer/>}/> */}
-            <Route path="music" element={<PlayListPage />} />
+            <Route
+              path="music"
+              /* 로그인 여부에 따라 페이지 렌더링 */
+              // element={!isAuthenticated ? <LoginPage /> : <PlayListPage />
+              element={<PlayListPage />}
+            />
             <Route path="list" element={<TrackListPage />} />
             <Route
               path="login"
+              /* 로그인 여부에 따라 페이지 렌더링 */
               element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
             />
             <Route path="/playlist" element={<MusicPlayer />} />
             <Route path="albums">
-              <Route path=":id" element={<AlbumDetailPage />} />
+              <Route
+                path=":id"
+                /* 로그인 여부에 따라 페이지 렌더링 */
+                // element={!isAuthenticated ? <LoginPage /> : <AlbumDetailPage />
+                element={<AlbumDetailPage />}
+              />
             </Route>
             <Route path="tracks">
-              <Route path=":id" element={<TrackDetailPage />} />
+              <Route
+                path=":id"
+                /* 로그인 여부에 따라 페이지 렌더링 */
+                // element={!isAuthenticated ? <LoginPage/> : <TrackDetailPage/>
+                element={<TrackDetailPage />}
+              />
             </Route>
           </Route>
           {/* 오류 화면 */}
