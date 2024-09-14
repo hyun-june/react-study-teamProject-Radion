@@ -20,9 +20,9 @@ const TrackAudioButton = ({preview, index}) => {
   
     return (
       <>
-        <button className="tracktable_play_button" onClick={handlePlay}>
-          <span className="tracktable_play_icon">{isPlaying ? <FontAwesomeIcon className='tracktable_pause-icon' icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}</span>
-          <span className="tracktable_index_icon">{index}</span>
+        <button className="trackaudiobutton_play_button" onClick={handlePlay}>
+          <span className="trackaudiobutton_play_icon">{isPlaying ? <FontAwesomeIcon className='trackaudiobutton_pause-icon' icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}</span>
+          <span className="trackaudiobutton_index_icon">{index}</span>
         </button>
         <audio ref={audioRef} src={preview} />
       </>

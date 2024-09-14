@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import './TrackListPage.style.css'
 import { usePlayListItems } from '../../hooks/usePlayListItems'
+import TrackListTable from './TrackListTable/TrackListTable'
 
 const TrackListPage = () => {
     const {data} = usePlayListItems();
@@ -21,35 +22,7 @@ const TrackListPage = () => {
         <Row>
         </Row>
 
-        <Row className="mt-5 ">
-          <Col lg="1" className="tracktable_center">#</Col>
-          <Col lg="1">Title</Col>
-          <Col lg="9"></Col>
-          <hr />
-          <Row>
-                <Col lg="1" className="tracktable_center">
-                    {index + 1}
-                </Col>
-                <Col lg="8" className="mb-2">
-                    <div>
-                    {trackList && trackList.length > 0 ? (
-                    <div>{trackList[0].track.name}</div>
-                    ) : (
-                    <div>Loading...</div>
-                    )}
-                    </div>
-                </Col>
-                <Col>
-                    <div>
-                        {trackList && trackList.length > 0 ? (
-                        <div>{trackList[0].track.artists[0].name}</div>
-                        ) : (
-                        <div>Loading...</div> 
-                        )}
-                    </div>
-                </Col>
-          </Row>
-        </Row>
+        <TrackListTable trackList={trackList}/>
       </Container>
     </div>
   )

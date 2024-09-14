@@ -1,23 +1,32 @@
-.tracktable_play_button {
+.trackaudiobutton_play_button {
     background: none;
     border: none;
     color: white;
   }
   
-  .tracktable_play_icon {
+  .trackaudiobutton_play_icon {
     display: none;
   }
   
-  .tracktable_row:hover .tracktable_play_icon{
+  .tracktable_row:hover .trackaudiobutton_play_icon{
     display: block;
     color: #1ed760;
   }
   
-  .tracktable_row:hover .tracktable_index_icon{
+  .tracktable_row:hover .trackaudiobutton_index_icon{
     display: none;
   }
 
-  .tracktable_pause-icon{
+  .tracklisttable_row:hover .trackaudiobutton_play_icon{
+    display: block;
+    color: #1ed760;
+  }
+  
+  .tracklisttable_row:hover .trackaudiobutton_index_icon{
+    display: none;
+  }
+
+  .trackaudiobutton_pause-icon{
     position: relative;
     margin-top: 4px;
 }
