@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />{" "}
             {/* <Route path="music" element={<MusicPlayer/>}/> */}
-            <Route path="music" element={<PlayListPage/>}/>
+            <Route path="playlist" element={<PlayListPage/>}/>
             <Route path="list">
               <Route path=":id" element={<TrackListPage/>}/>
             </Route>
@@ -34,7 +34,6 @@ function App() {
               path="login"
               element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
             />
-            <Route path="/playlist" element={<MusicPlayer />} />
             <Route path="albums">
               <Route path=":id" element={<AlbumDetailPage />} />
             </Route>

@@ -29,8 +29,6 @@ const TrackDetailPage = ({id}) => {
       setArtistName(track.artists[0].name);
     }
   }, [track]);
- 
-  console.log(track);
 
   if (isLoading) {
     return <h1>Loading...</h1>;

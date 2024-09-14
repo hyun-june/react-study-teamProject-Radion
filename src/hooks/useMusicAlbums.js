@@ -24,6 +24,6 @@ const fetchMusicAlbums = async () => {
 export const useMusicAlbumsQuery = () => {
     return useQuery({
         queryKey: ['Music-popular'],
-        queryFn: fetchMusicAlbums,
-    });
+        queryFn:fetchMusicAlbums,
+    }); 
 };

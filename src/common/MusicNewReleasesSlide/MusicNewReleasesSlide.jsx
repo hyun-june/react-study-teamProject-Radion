@@ -24,7 +24,7 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
     <div>
          <div>
          <Container>
-            <h2 className='NewReleasest_title'>New Releasest</h2>
+            <h2 className='NewReleases_title'>New Releases</h2>
         </Container>
          <Carousel
               responsive={responsive}

@@ -22,7 +22,8 @@ const responsive = {
     items: 1,
 
   }}
-const MusicSlide = ({ albumData }) => {
+  
+const MusicRecommendationsSlide = ({ albumData }) => {
     return (
         <>
           <Container>
@@ -50,4 +51,4 @@ const MusicSlide = ({ albumData }) => {
     );
 };
 
-export default MusicSlide;
+export default MusicRecommendationsSlide;
