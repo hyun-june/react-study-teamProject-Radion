@@ -2,21 +2,27 @@ import React, { useEffect, useState } from "react";
 import "./AlbumDetailPage.style.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
-import { Alert, Button, Col, Container, Modal, Row } from "react-bootstrap";
-import TrackTable from "./component/TrackTable/TrackTable";
+import { Alert, Col, Container, Modal, Row } from "react-bootstrap";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
+import TrackBox from "../../common/component/TrackBox/TrackBox";
+import TrackTable from './component/TrackTable/TrackTable';
 
 const AlbumDetailPage = () => {
-  // TODO. useParams 쓰는걸로 바꿔야 함.
   // const id = "5V8n6fqyAPxvFTibPhQVcp";
-   const { id } = useParams();
-  // const navigate = useNavigate();
-  
+  const { id } = useParams();
+  const navigate = useNavigate();
+
 
   const [lgShow, setLgShow] = useState(false);
   const [artistId, setArtistId] = useState(null);
   const [artistName, setArtistName] = useState(null);
+
+  const toArtistDetailPage = (id, event) => {
+    event.preventDefault();
+    navigate(`/artists/${id}`);
+
+  }
 
   const {
     data: album,
@@ -39,8 +45,6 @@ const AlbumDetailPage = () => {
     isError: aAIsError,
     error: aAError,
   } = useArtistAlbumQuery(artistId);
- 
-  // console.log(album);
 
   if (isLoading || aAIsLoading) {
     return <h1>Loading...</h1>;
@@ -51,11 +55,12 @@ const AlbumDetailPage = () => {
   if (aAIsError) {
     return <Alert variant="danger">{aAError.message}</Alert>;
   }
+
   return (
     <div className="albumdetailpage_body">
       <Container>
         <Row>
-          <Col>
+          <Col  lg="4" md="6" sm="12" xs="12">
             <img
               className="albumdetailpage_poster"
               src={album?.images[1].url}
@@ -63,7 +68,7 @@ const AlbumDetailPage = () => {
               onClick={() => setLgShow(true)}
             />
           </Col>
-          <Col>
+          <Col lg="4" md="6" sm="12" xs="12">
             <Row className="albumdetailpage_type mt-4">
             <div>Album</div>
               {/* <div>{album?.album_type.charAt(0).toUpperCase() + album?.album_type.slice(1)}</div> */}
@@ -74,7 +79,7 @@ const AlbumDetailPage = () => {
             <Row>
               <Col>
                 <div>
-                  <span className="albumdetailpage_artistName">{artistName}</span> • <span>{album?.release_date.slice(0, 4)}</span>
+                  <span className="albumdetailpage_artistName" onClick={(event) => toArtistDetailPage(artistId,event)}>{artistName}</span> • <span>{album?.release_date.slice(0, 4)}</span>
                 </div>
               </Col>
             </Row>
@@ -94,20 +99,10 @@ const AlbumDetailPage = () => {
 
 
 
-        <Row><div className="albumdetailpage_more_albums mt-5">Watch more of {artistName}'s songs</div></Row>
+        <Row><div className="mt-5"><span className="albumdetailpage_more_albums" onClick={(event) => toArtistDetailPage(artistId,event)}>Watch more of {artistName}'s songs</span></div></Row>
         <Row>
-          <Col>
-            <img src={artistAlbum?.items[0].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[0].name}</div>
-          </Col>
-          <Col>
-            <img src={artistAlbum?.items[1].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[1].name}</div>
-          </Col>
-          <Col>
-            <img src={artistAlbum?.items[2].images[1].url} alt=""/>
-            <div>{artistAlbum?.items[2].name}</div>
-          </Col>
+          <TrackBox data={artistAlbum?.items}/>
+          
         </Row>
 
 
