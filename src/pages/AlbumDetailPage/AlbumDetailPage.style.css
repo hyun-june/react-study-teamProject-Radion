@@ -1,0 +1,55 @@
+.albumdetailpage_body {
+    background-color: #1f1f1f;
+    color: white;
+    height: 100%;
+}
+
+.albumdetailpage_title {
+    margin-top: 2rem;
+}
+
+.albumdetailpage_title > div {
+    font-weight: 900;
+    font-size: 4vw;
+}
+
+.albumdetailpage_poster {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.albumdetailpage_poster:hover {
+    transform: scale(1.05);
+}
+
+.albumdetailpage_more_albums {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.albumdetailpage_more_albums:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.albumdetailpage_artistName:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.albumdetailpage_modal_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .albumdetailpage_modal_header {
+    border-bottom: none;
+    background: none !important;
+  }
+
+  @media (min-width: 992px) {
+    .albumdetailpage_title > div {
+      font-size: 3rem; /* 최대 폰트 크기 */
+    }
+  }

@@ -1,0 +1,56 @@
+.trackdetailpage_body {
+  background-color: #1f1f1f;
+  color: white;
+  height: 100%;
+}
+
+.trackdetailpage_title {
+  margin-top: 2rem;
+}
+
+
+.trackdetailpage_title > div {
+  font-weight: 900;
+  font-size: 4vw;
+}
+
+.trackdetailpage_poster {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.trackdetailpage_poster:hover {
+  transform: scale(1.05);
+}
+
+.trackdetailpage_more_albums {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.trackdetailpage_more_albums:hover {
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+.trackdetailpage_artistName:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.trackdetailpage_modal_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackdetailpage_modal_header {
+  border-bottom: none;
+  background: none !important;
+}
+
+@media (min-width: 992px) {
+  .trackdetailpage_title > div {
+    font-size: 3rem; /* 최대 폰트 크기 */
+  }
+}

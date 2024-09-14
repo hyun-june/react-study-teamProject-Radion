@@ -15,7 +15,6 @@ api.interceptors.request.use(
     
     // Authorization 헤더에 토큰 추가
     config.headers.Authorization = `Bearer ${token}`;
-    
 
     return config;
   },
@@ -34,5 +33,6 @@ axios.interceptors.response.use(function (response) {
   // 응답 오류가 있는 작업 수행
   return Promise.reject(error);
 });
+
 
 export default api;

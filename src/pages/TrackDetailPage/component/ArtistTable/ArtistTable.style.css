@@ -1,0 +1,31 @@
+.artistList_profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.artistList_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.artisttable_row {
+  padding: 0.5rem;
+}
+
+.artisttable_row:hover {
+  background-color: rgb(70, 70, 70);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.artisttable_artist_name:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.artisttable_artist_name {
+  font-weight: 800;
+}
