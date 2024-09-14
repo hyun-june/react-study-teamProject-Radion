@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />{" "}
             {/* <Route path="music" element={<MusicPlayer/>}/> */}
-            <Route path="music" element={<PlayListPage/>}/>
+            <Route path="playlist" element={<PlayListPage/>}/>
             <Route path="list" element={<TrackListPage/>}/>
             <Route
               path="login"
