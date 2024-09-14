@@ -13,9 +13,6 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
 }
 
 .pause-icon{

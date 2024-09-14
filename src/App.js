@@ -26,7 +26,7 @@ function App() {
             <Route index element={<HomePage />} />{" "}
             {/* <Route path="music" element={<MusicPlayer/>}/> */}
             <Route
-              path="music"
+              path="playlist"
               /* 로그인 여부에 따라 페이지 렌더링 */
               // element={!isAuthenticated ? <LoginPage /> : <PlayListPage />
               element={<PlayListPage />}
@@ -39,7 +39,6 @@ function App() {
               /* 로그인 여부에 따라 페이지 렌더링 */
               element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />}
             />
-            <Route path="/playlist" element={<MusicPlayer />} />
             <Route path="albums">
               <Route
                 path=":id"

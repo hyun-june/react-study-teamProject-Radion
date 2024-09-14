@@ -15,7 +15,7 @@ const MusicAlbum = () => {
     if (isError) {
         return <Alert variant="danger">{error.message}</Alert>;
     }
-
+    
     return (
 
         <>
