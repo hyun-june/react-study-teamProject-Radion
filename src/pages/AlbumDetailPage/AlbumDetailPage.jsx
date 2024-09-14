@@ -9,8 +9,8 @@ import TrackBox from "../../common/component/TrackBox/TrackBox";
 import TrackTable from './component/TrackTable/TrackTable';
 
 const AlbumDetailPage = () => {
-  const id = "5V8n6fqyAPxvFTibPhQVcp";
-  // const { id } = useParams();
+  // const id = "5V8n6fqyAPxvFTibPhQVcp";
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const [lgShow, setLgShow] = useState(false);
