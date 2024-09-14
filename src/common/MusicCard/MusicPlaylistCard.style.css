@@ -8,6 +8,7 @@
   .Playlist_img img {
     height: 300px;
     width: 300px;
+    border-radius: 55px;
     cursor: pointer;
     transition: transform 0.3s;
     position: relative;
@@ -41,10 +42,11 @@
     }
   }
   @media screen and (max-width: 768px) {
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 
     .Playlist_img {
         margin-top: 1em;
-        height: 350px;
+        height: 250px;
         cursor: pointer;
         transition: 0.5s;
         position: relative;

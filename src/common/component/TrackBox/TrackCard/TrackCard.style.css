@@ -1,0 +1,30 @@
+.trackcard_card {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  z-index: 2;
+}
+
+.trackcard_card:hover {
+  background-color: rgb(44, 44, 44);
+  cursor: pointer;
+}
+
+.trackcard_img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.trackcard_artist {
+  color: rgb(158, 154, 154);
+  z-index: 3;
+}
+
+.trackcard_artist:hover {
+  color: white;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}

@@ -2,9 +2,13 @@
 .MusicNewReleases_image-card img {
     width: 90%; /* Adjust this value as needed */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 55px;
 }
 .NewReleases_title{
-margin-bottom: 1em;
+  margin-top: 1em;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom:1em;
 }
 .MusicNewReleases_image-card {
     position: relative;
@@ -52,6 +56,13 @@ margin-bottom: 1em;
     .MusicNewReleases_image-card {
       margin-top: 1em;
       height: 350px;
+    }
+    .NewReleasest_title{
+      margin-top: 1em;
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom:1em;
+    
     }
   
     .MusicNewReleases_image-card img {

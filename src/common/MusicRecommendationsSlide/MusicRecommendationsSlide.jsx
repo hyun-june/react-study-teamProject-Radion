@@ -22,12 +22,11 @@ const responsive = {
     items: 1,
 
   }}
-  
 const MusicRecommendationsSlide = ({ albumData }) => {
     return (
         <>
           <Container>
-            <h2 className = 'RecommendationsMusic_title'>RecommendationsMusic</h2>
+            <h2 className = 'RecommendationsMusic_title'>Recommendations</h2>
             </Container>
             <Carousel
                 responsive={responsive}
