@@ -4,7 +4,6 @@
     height: auto; /* Maintain aspect ratio */
 }
 .NewReleasest_title{
-margin-top: 1em;
 margin-bottom: 1em;
 }
 .MusicNewReleases_image-card {
@@ -24,5 +23,40 @@ margin-bottom: 1em;
   .MusicNewReleases_image-card:hover img {
     transform: scale(1.2); /* Adjust the scale factor as needed */
     z-index: 1; /* Bring the hovered image to the front */
+  }
+  @media screen and (max-width: 1850px){
+    .MusicNewReleases_image-card {
+      margin-top: 1em;
+      height: 350px;
+    }
+  
+    .MusicNewReleases_image-card img {
+      height: 220px;
+      width: 220px;
+    }
+  }
+  @media screen and (max-width: 1350px){
+    .MusicNewReleases_image-card {
+      margin-top: 1em;
+      height: 350px;
+    }
+  
+    .MusicNewReleases_image-card img {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .MusicNewReleases_image-card {
+      margin-top: 1em;
+      height: 350px;
+    }
+  
+    .MusicNewReleases_image-card img {
+      height: 220px;
+      width: 220px;
+    }
   }
   

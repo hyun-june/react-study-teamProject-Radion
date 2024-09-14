@@ -9,7 +9,7 @@ const MusicCard = ({ music }) => {
 
 
   const goToDetailPage = (id) => {
-    if (music && music.album && music.album.id) {
+    if (music ) {
       navigate(`/albums/${music.id}`);
   } else {
         console.error('Error: Missing album id in music data');
@@ -17,7 +17,7 @@ const MusicCard = ({ music }) => {
   }
 
   return (
-    <div>
+    <div className='music_card_Releasest'>
     {music ? (
       <img src={secondImage} alt={music.name} onClick={goToDetailPage} />
     ) : (

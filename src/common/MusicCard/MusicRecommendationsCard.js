@@ -16,8 +16,8 @@ const MusicRecommendationsCard = ({ music }) => {
 
   return (
   
-      <div className="musicRecommendations-card" onClick={goToDetailPage}> 
-        <img src={secondImage} alt={music.name} className="musicRecommendations-image"  />
+      <div className="musicRecommendations-card" onClick={goToDetailPage}>
+        <img src={secondImage} alt={music.name}  />
       </div>
 
 

@@ -13,7 +13,7 @@ const MusicPlaylistCard = ({ playlist }) => {
   
 
     return (
-        <div>
+        <div className='Playlist_img'>
             {secondImage && <img src={secondImage} alt={playlist.name}onClick={goToDetailPage}/>}
         </div>
     );

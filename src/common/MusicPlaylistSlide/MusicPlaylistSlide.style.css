@@ -2,3 +2,10 @@
     margin-top: 1em;
     margin-bottom:1em;
 }
+.carousel-container {
+    z-index: 1; /* Ensure the carousel container has a lower z-index */
+  }
+  
+  .movie-slider {
+    z-index: 1; /* Make sure the individual movie sliders have a lower z-index than the enlarged image */
+  }

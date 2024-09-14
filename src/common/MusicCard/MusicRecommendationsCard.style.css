@@ -1,16 +1,45 @@
 .musicRecommendations {
-    position: relative;
-    overflow: hidden;
-}
-
-.musicRecommendations-image
-{
-    transition: transform 0.2s;
-    width: 100%;
-    height: auto;
-}
-
-.musicRecommendations-image:hover .musicRecommendations-image{
-    transform: scale(1.1);
+    margin-top: 2em;
+    height: 450px;
     cursor: pointer;
+    transition: 0.5s;
+    position: relative;
 }
+
+.musicRecommendations img
+{
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.musicRecommendations-image:hover {
+    transform: scale(1.2);
+    z-index: 999;
+}
+@media screen and (max-width: 768px) {
+    .musicRecommendations {
+      margin-top: 1em;
+      height: 350px;
+      cursor: pointer;
+      transition: 0.5s;
+      position: relative;
+    }
+    .musicRecommendations img {
+      height: 220px;
+      width: 220px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      position: relative;
+
+    }
+
+    .musicRecommendations img:hover {
+      transform: scale(1.2);
+      z-index: 999;
+    }
+  
+  }

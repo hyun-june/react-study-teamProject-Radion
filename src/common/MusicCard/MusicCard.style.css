@@ -1,27 +1,67 @@
-.img-container {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .img-container img {
-    transition: transform 0.2s;
-  }
-  
-  .img-container img:hover {
-    transform: scale(1.2);
-    z-index: 2;
-  }
-  /* MusicCard.style.css */
-
-.music-card {
+.music_card_Releasest {
+  margin-top: 2em;
+  height: 450px;
+  cursor: pointer;
+  transition: 0.5s;
   position: relative;
-  overflow: hidden;
 }
 
-.music-card img {
+.music_card_Releasest img {
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
   transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
 }
 
-.music-card:hover img {
-  transform: scale(1.2); /* Increase the scale factor as needed */
+.music_card_Releasest img:hover {
+  transform: scale(1.2);
+  z-index: 999;
+  position: relative; /* Ensure proper stacking context */
+}
+
+.music_card_Releasest img:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 5;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent black overlay */
+}
+@media screen and (max-width: 1850px){
+  .music_card_Releasest {
+    margin-top: 1em;
+    height: 350px;
+  }
+
+  .music_card_Releasest img {
+    height: 220px;
+    width: 220px;
+  }
+}
+@media screen and (max-width: 1350px){
+  .music_card_Releasest {
+    margin-top: 1em;
+    height: 350px;
+  }
+
+  .music_card_Releasest img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .music_card_Releasest {
+    margin-top: 1em;
+    height: 350px;
+  }
+
+  .music_card_Releasest img {
+    height: 220px;
+    width: 220px;
+  }
 }
