@@ -18,7 +18,28 @@
     transform: scale(1.2);
     z-index: 999;
   }
+  @media screen and (max-width: 1850px){
+    .Playlist_img {
+      margin-top: 1em;
+      height: 300px;
+    }
+  
+    .Playlist_img img {
+      height: 220px;
+      width: 220px;
+    }
+  }
+  @media screen and (max-width: 1350px){
+    .Playlist_img {
+      margin-top: 1em;
+      height: 250px;
+    }
 
+    .Playlist_img img {
+      height: 200px;
+      width: 200px;
+    }
+  }
   @media screen and (max-width: 768px) {
 
     .Playlist_img {
@@ -34,10 +55,9 @@
         cursor: pointer;
         transition: transform 0.3s;
         position: relative;
-      
+
       }
-      
-    
+
       .Playlist_img img:hover {
         transform: scale(1.2);
         z-index: 999;
