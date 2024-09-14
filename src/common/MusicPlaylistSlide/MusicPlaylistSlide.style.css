@@ -1,5 +1,7 @@
 .MusicPlaylistSlide_title{
     margin-top: 1em;
+    font-size: 40px;
+    font-weight: bold;
     margin-bottom:1em;
 }
 .carousel-container {
@@ -8,4 +10,12 @@
   
   .movie-slider {
     z-index: 1; /* Make sure the individual movie sliders have a lower z-index than the enlarged image */
+  }
+  @media screen and (max-width: 768px) {
+    .MusicPlaylistSlide_title{
+        margin-top: 1em;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom:1em;
+    }
   }
