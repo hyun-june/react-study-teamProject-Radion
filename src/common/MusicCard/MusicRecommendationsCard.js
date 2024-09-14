@@ -1,23 +1,26 @@
 import './MusicRecommendationsCard.style.css';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
 
 
 
-const MusicRecommendationsCard = ({ music, goToDetailPage }) => {
+const MusicRecommendationsCard = ({ music }) => {
     console.log( "여기가 레커멘카드 마지막 ",music)
+    const navigate = useNavigate();
+    const secondImage = music.album.images && music.album.images.length > 0 ? music.album.images[0].url : '';
 
-    const secondImage = music.images && music.images.length > 0 ? music.images[0].url : '';
-
-  // const goToDetailPage = (id) => {
-  //   navigate(`/music/${id}`);
-  // }
+    const goToDetailPage = (id) => {
+      navigate(`/albums/${music.id}`);
+    }
 
   return (
-    <div>
-      <img src={secondImage} alt={music.name} />
+  
+      <div className="musicRecommendations-card" onClick={goToDetailPage}> 
+        <img src={secondImage} alt={music.name} className="musicRecommendations-image"  />
+      </div>
 
-  </div>
+
   );
 };
 

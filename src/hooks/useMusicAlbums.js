@@ -14,7 +14,7 @@ const fetchMusicAlbums = async () => {
                 // Add any other required parameters here
             },
         });
-        console.log("ddd", response.data); // Move this line above the return statement
+        // console.log("ddd", response.data); // Move this line above the return statement
         return response.data;
     } catch (error) {
         throw new Error('Failed to fetch popular music');

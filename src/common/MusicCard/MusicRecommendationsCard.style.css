@@ -1,0 +1,16 @@
+.musicRecommendations {
+    position: relative;
+    overflow: hidden;
+}
+
+.musicRecommendations-image
+{
+    transition: transform 0.2s;
+    width: 100%;
+    height: auto;
+}
+
+.musicRecommendations-image:hover .musicRecommendations-image{
+    transform: scale(1.1);
+    cursor: pointer;
+}
