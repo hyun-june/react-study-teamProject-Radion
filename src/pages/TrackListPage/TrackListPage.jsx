@@ -3,9 +3,11 @@ import { Col, Container, Row } from 'react-bootstrap'
 import './TrackListPage.style.css'
 import { usePlayListItems } from '../../hooks/usePlayListItems'
 import TrackListTable from './TrackListTable/TrackListTable'
+import { useParams } from 'react-router-dom'
 
 const TrackListPage = () => {
-    const {data} = usePlayListItems();
+    const {id} = useParams();
+    const {data} = usePlayListItems({id});
     const trackList = data ? data.slice(0, 9) : [];
     console.log("11",trackList)
     const index = 0;

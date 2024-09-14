@@ -52,8 +52,8 @@
         position: relative;
       }
       .Playlist_img img {
-        height: 220px;
-        width: 220px;
+        height: 200px;
+        width: 200px;
         cursor: pointer;
         transition: transform 0.3s;
         position: relative;

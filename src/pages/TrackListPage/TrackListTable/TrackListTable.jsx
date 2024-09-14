@@ -14,7 +14,7 @@ const TrackListTable = ({ trackList }) => {
     navigate(`/tracks/${id}`);
 
   }
-
+  
   return (
     <>
       <Row className="mt-5">

@@ -4,7 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './MusicNewReleasesSlide.style.css';
 import MovieCard from '../MusicCard/MusicCard';
-const MusicNewReleasestSlide= ({ NewReleasesData }) => {
+const MusicNewReleasesSlide= ({ NewReleasesData }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 304  },
@@ -45,4 +45,4 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
   );
 };
 
-export default MusicNewReleasestSlide;
+export default MusicNewReleasesSlide;
