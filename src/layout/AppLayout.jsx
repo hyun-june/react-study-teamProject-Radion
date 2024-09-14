@@ -46,7 +46,7 @@ const AppLayout = () => {
           {location.pathname !== "/login" && (
             <>
               <Navbar.Brand href="/" onClick={(e) => handleNavigation(e, "/")}>
-                <div className="navbar_logo">
+                <div className="navbar_logo_desktop">
                   <img alt="" src={radionLogo} className="navbar_logo_img" />
                   <span className="navbar_logo_text">radion</span>
                 </div>
@@ -61,12 +61,70 @@ const AppLayout = () => {
               </Nav>
               <Navbar.Toggle
                 aria-controls="navbarScroll"
-                className="ms-auto custom-toggle"
+                className="ms-auto custom-toggle desktop-toggle"
               />
             </>
           )}
 
-          {/* 모바일사이즈일때 보이는 logo & 햄버거 메뉴 */}
+          {/* 모바일사이즈일때 보이는 logo & 햄버거 메뉴 -> 유저네임이 햄버거메뉴안에서 보임*/}
+          {/* {location.pathname !== "/login" && (
+            <Navbar.Collapse id="navbarScroll" className="d-lg-none">
+              <div className="mobile-nav-container">
+                {user && (
+                  <div className="mobile-user-info">
+                    <span>{user.name}</span>
+                  </div>
+                )}
+              </div>
+              <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+                <Nav.Link
+                  className="hamburger_menu_home_link"
+                  onClick={(e) => handleNavigation(e, "/")}
+                >
+                  Home
+                </Nav.Link>
+                <Nav.Link onClick={(e) => handleNavigation(e, "/playlist")}>
+                  Playlist
+                </Nav.Link>
+                {user ? (
+                  <Nav.Link
+                    className="hamburger_menu_login_link"
+                    onClick={handleLogout}
+                  >
+                    Log out
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link
+                    className="hamburger_menu_login_link"
+                    onClick={(e) => handleNavigation(e, "/login")}
+                  >
+                    Log in
+                  </Nav.Link>
+                )}
+              </Nav>
+            </Navbar.Collapse>
+          )} */}
+
+          {/* 모바일사이즈일때 유저네임 햄버거버튼 옆에 보이게하기*/}
+          {location.pathname !== "/login" && (
+            <div className="d-lg-none mobile-nav-container">
+              <Navbar.Brand href="/" onClick={(e) => handleNavigation(e, "/")}>
+                <div className="navbar_logo">
+                  <img alt="" src={radionLogo} className="navbar_logo_img" />
+                  <span className="navbar_logo_text">radion</span>
+                </div>
+              </Navbar.Brand>
+              <div className="mobile-user-info">
+                {user && <span>{user.name}</span>}
+              </div>
+              <Navbar.Toggle
+                aria-controls="navbarScroll"
+                className="custom-toggle"
+              />
+            </div>
+          )}
+
+          {/* Mobile menu collapse */}
           {location.pathname !== "/login" && (
             <Navbar.Collapse id="navbarScroll" className="d-lg-none">
               <Nav className="me-auto my-2 my-lg-0" navbarScroll>
