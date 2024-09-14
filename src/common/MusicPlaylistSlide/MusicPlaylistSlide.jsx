@@ -12,6 +12,10 @@ const MusicPlaylistSlide = ({ PlaylistData }) => {
       items: 5,
     },
     tablet: {
+      breakpoint: { max: 1830, min: 464 },
+      items: 4,
+    },
+    tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
     },
@@ -23,7 +27,7 @@ const MusicPlaylistSlide = ({ PlaylistData }) => {
   return (
     <div>
             <Container>
-            <h2 className='MusicPlaylistSlide_title'>PopularMusicPlaylist</h2>
+            <h2 className='MusicPlaylistSlide_title'>Popular Music Playlists</h2>
             </Container>
             <Carousel
               responsive={responsive}
@@ -33,16 +37,7 @@ const MusicPlaylistSlide = ({ PlaylistData }) => {
               itemClass = "movie-slider p-1"
              >
                 {PlaylistData.playlists.items.map((playlist, index)  => (
-                     <li key={index}>
-                        {/* <img src={playlist.images[0].url} alt={`Playlist Cover`} 
-                                      style={{ width: '300px', height: '300px' }}
-                                      /> */}
-                                    
-                        {/* <strong>Name:</strong> {playlist.name}<br />
-                        <strong>Description:</strong> {playlist.description} <br />
-                        <strong>Collaborative:</strong> {playlist.collaborative ? "Yes" : "No"}<br /> */}
-                        <MusicPlaylistCard playlist={playlist}/>
-                    </li>
+                        <MusicPlaylistCard playlist={playlist} key={index} />
                 ))}
            </Carousel>
     </div>

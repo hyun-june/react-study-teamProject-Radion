@@ -13,6 +13,7 @@ const AlbumDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+
   const [lgShow, setLgShow] = useState(false);
   const [artistId, setArtistId] = useState(null);
   const [artistName, setArtistName] = useState(null);
