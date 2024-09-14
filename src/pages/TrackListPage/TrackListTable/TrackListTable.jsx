@@ -2,7 +2,8 @@ import React from "react";
 import "./TrackListTable.style.css";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import TrackAudioButton from './../../AlbumDetailPage/component/TrackAudioButton/TrackAudioButton';
+import TrackAudioButton from "../../../common/component/TrackAudioButton/TrackAudioButton";
+
 
 const TrackListTable = ({ trackList }) => {
   const navigate = useNavigate();

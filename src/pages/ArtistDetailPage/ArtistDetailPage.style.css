@@ -1,0 +1,19 @@
+.artistdetailpage_img {
+  width: 100%;
+  height: calc(40vh + 64px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.artistdetailpage_info {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.artistdetailpage_name {
+  font-weight: 900;
+  font-size: 5vw;
+  
+}

@@ -15,6 +15,7 @@ import { UserContextProvider } from "./context/UserContext";
 import PrivateRoute from "./route/PrivateRoute";
 import PlayListPage from "./pages/PlayListPage/PlayListPage.jsx"
 import TrackListPage from "./pages/TrackListPage/TrackListPage.jsx";
+import ArtistDetailPage from "./pages/ArtistDetailPage/ArtistDetailPage.jsx";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="tracks">
               <Route path=":id" element={<TrackDetailPage />} />
+            </Route>
+            <Route path="artists">
+              <Route path=":id" element={<ArtistDetailPage />} />
             </Route>
           </Route>
           {/* 오류 화면 */}

@@ -3,10 +3,10 @@ import "./AlbumDetailPage.style.css";
 import { useParams } from "react-router-dom";
 import { useAlbumDetailQuery } from "../../hooks/useAlbumDetail";
 import { Alert, Col, Container, Modal, Row } from "react-bootstrap";
-import TrackTable from "./component/TrackTable/TrackTable";
 import { useArtistAlbumQuery } from "../../hooks/useArtistAlbum";
 import AudioPlayerButton from "../../common/component/AudioPlayerButton/AudioPlayerButton";
 import TrackBox from "../../common/component/TrackBox/TrackBox";
+import TrackTable from './component/TrackTable/TrackTable';
 
 const AlbumDetailPage = () => {
   // TODO. useParams 쓰는걸로 바꿔야 함.
