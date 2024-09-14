@@ -27,7 +27,7 @@ const MusicPlaylistSlide = ({ PlaylistData }) => {
   return (
     <div>
             <Container>
-            <h2 className='MusicPlaylistSlide_title'>PopularMusicPlaylist</h2>
+            <h2 className='MusicPlaylistSlide_title'>Popular Music Playlists</h2>
             </Container>
             <Carousel
               responsive={responsive}

@@ -11,7 +11,11 @@ const MusicRecommendationsCard = ({ music }) => {
     const secondImage = music.album.images && music.album.images.length > 0 ? music.album.images[0].url : '';
 
     const goToDetailPage = (id) => {
-      navigate(`/albums/${music.id}`);
+      if (music ) {
+        navigate(`/albums/${music.album.id}`);
+    } else {
+          console.error('Error: Missing album id in music data');
+      }
     }
 
   return (
