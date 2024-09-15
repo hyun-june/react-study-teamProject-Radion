@@ -6,12 +6,12 @@ import { useNavigate } from 'react-router-dom';
 const MusicPlaylistCard = ({ playlist }) => {
     const navigate = useNavigate();
     const secondImage = playlist?.images?.[0]?.url;
+    const playlistName = playlist?.name
+
     const goToDetailPage = (id, event) => {
         event.preventDefault();
-        navigate(`/list/${id}`);
+        navigate(`/list/${id}`,{ state: { secondImage,playlistName } });
       }
-
-  
 
     return (
         <div className='Playlist_img'>

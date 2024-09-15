@@ -5,8 +5,12 @@ import { Alert } from 'react-bootstrap';
 import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useNewReleasesAlbums } from '../../../../hooks/useNewReleases';
 const Banner = () => {
-  const { data: PlaylistData, isLoading, isError, error } = usePlaylistQuery();
+  // const { data: PlaylistData, isLoading, isError, error } = usePlaylistQuery();
+  const {data , isLoading, isError, error} = useNewReleasesAlbums();
+  // console.log("배너",data)
+  // console.log("이게 베너다", PlaylistData);
   const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -32,7 +36,8 @@ const Banner = () => {
         className='banner'
       >
          <Container>
-          <img className="banner_img" src={PlaylistData.playlists.items[currentIndex].images[0].url} alt={`Playlist Cover`} />
+          {/* <img className="banner_img" src={PlaylistData.playlists.items[currentIndex].images[0].url} alt={`Playlist Cover`} /> */}
+          <img className="banner_img" src={data.items[currentIndex].images[0].url} alt={`Playlist Cover`} />
          </Container>
     </div>
     </div>
