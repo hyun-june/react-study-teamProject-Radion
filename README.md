@@ -1,15 +1,16 @@
 # radion
+radion은 radio와 on을 결합된 단어로, 라디오처럼 언제 어디서나 다양한 음악을 들을 수 있도록 도와준다라는 의미
 <h1>코딩알려주는누나 리액트 스터디 2기 팀프로젝트 6조</h1>
 <br/>
-
 ## 링크
 - [배포](https://radion-react-project.vercel.app/)
 - [Figma](https://www.figma.com/design/1XkwexEXjYZP0XyOWO04Dm/리액트-스터디-2기-6조?node-id=0-1&node-type=CANVAS&t=Rqzwfp7MrQ9fbRIU-0)
 <br/><br/>
 
 ## 프로젝트 소개
+
 ### 주제
-실시간 스트리밍이 가능한 음악 사이트
+스포티파이와같은 음악 스트리밍사이트를 만드는것
 ### 목적
 
 ### 쓰임새
