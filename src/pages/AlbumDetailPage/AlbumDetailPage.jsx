@@ -68,7 +68,7 @@ const AlbumDetailPage = () => {
               onClick={() => setLgShow(true)}
             />
           </Col>
-          <Col lg="4" md="6" sm="12" xs="12">
+          <Col lg="8" md="6" sm="12" xs="12">
             <Row className="albumdetailpage_type mt-4">
             <div>Album</div>
               {/* <div>{album?.album_type.charAt(0).toUpperCase() + album?.album_type.slice(1)}</div> */}

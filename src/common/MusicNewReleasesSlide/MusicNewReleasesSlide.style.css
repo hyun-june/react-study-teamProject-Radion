@@ -4,12 +4,11 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 55px;
 }
-.NewReleasest_title{
+.NewReleases_title{
   margin-top: 1em;
   font-size: 40px;
   font-weight: bold;
   margin-bottom:1em;
-
 }
 .MusicNewReleases_image-card {
     position: relative;

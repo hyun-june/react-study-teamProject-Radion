@@ -1,42 +1,42 @@
-  .trackaudiobutton_play_button {
-    background: none;
-    border: none;
-    color: white;
-  }
-  
-  .trackaudiobutton_play_icon {
-    display: none;
-  }
-  
-  .tracktable_row:hover .trackaudiobutton_play_icon{
-    display: block;
-    color: #1ed760;
-  }
-  
-  .tracktable_row:hover .trackaudiobutton_index_icon{
-    display: none;
-  }
+.trackaudiobutton_play_button {
+  background: none;
+  border: none;
+  color: white;
+}
 
-  .tracklisttable_row:hover .trackaudiobutton_play_icon{
-    display: block;
-    color: #1ed760;
-  }
-  
-  .tracklisttable_row:hover .trackaudiobutton_index_icon{
-    display: none;
-  }
+.trackaudiobutton_play_icon {
+  display: none;
+}
 
-  .trackaudiobutton_pause-icon{
-    position: relative;
-    margin-top: 4px;
-  }
+.tracktable_row:hover .trackaudiobutton_play_icon{
+  display: block;
+  color: #1ed760;
+}
+
+.tracktable_row:hover .trackaudiobutton_index_icon{
+  display: none;
+}
+
+.tracklisttable_row:hover .trackaudiobutton_play_icon{
+  display: block;
+  color: #1ed760;
+}
+
+.tracklisttable_row:hover .trackaudiobutton_index_icon{
+  display: none;
+}
+
+.trackaudiobutton_pause-icon{
+  position: relative;
+  margin-top: 4px;
+}
 
   .trackaudiobutton_x {
-    color: rgb(150, 0, 0) !important;
+    color: gray;
     position: relative;
     right: 3px;
   }
 
   .trackaudiobutton_x:hover {
-    color: rgb(150, 0, 0) !important;
+    color: rgb(150, 0, 0);
   }
