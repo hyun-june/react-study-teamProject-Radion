@@ -8,6 +8,7 @@ import { useArtistAlbumQuery } from './../../hooks/useArtistAlbum';
 import { useArtistTopTracksQuery } from './../../hooks/useArtistTopTracks';
 import { useParams } from "react-router-dom";
 import PopularTrackTable from "./component/PopularTrackTable/PopularTrackTable";
+import TrackBox from "../../common/component/TrackBox/TrackBox";
 
 const ArtistDetailPage = () => {
   const { id } = useParams();
@@ -92,6 +93,11 @@ const ArtistDetailPage = () => {
       </Row>
 
       <PopularTrackTable tracks={artistTopTracks?.tracks}/>
+
+      <Row><div className="mt-5"><span className="trackdetailpage_more_albums">Watch more of {artistName}'s songs</span></div></Row>
+      <Row>
+        <TrackBox data={artistAlbum?.items}/>
+      </Row>
     </Container>
   );
 };
