@@ -7,7 +7,6 @@ import MusicRecommendationsSlide from '../../../../common/MusicRecommendationsSl
 
 const MusicAlbum = () => {
     const { data: albumData, isLoading, isError, error } = useMusicAlbumsQuery();
-    // console.log("MusicSlide", albumData);
 
     if (isLoading) {
         return <h1>Loading...</h1>;

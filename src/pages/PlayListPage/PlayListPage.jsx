@@ -20,7 +20,6 @@ const MusicPlayer = () => {
     setPlaying(!playing);
   }
 
-  console.log(videoList)
 
   const keywordChange = (e) => {
     setKeywordInput(e.target.value);
