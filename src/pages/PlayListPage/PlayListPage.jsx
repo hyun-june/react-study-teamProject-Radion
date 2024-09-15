@@ -20,7 +20,7 @@ const MusicPlayer = () => {
     setPlaying(!playing);
   }
 
-  console.log(videoList)
+  // console.log(videoList)
 
   const keywordChange = (e) => {
     setKeywordInput(e.target.value);
@@ -65,7 +65,7 @@ const MusicPlayer = () => {
       console.log(error);
     }
   };
-  console.log(keyword)
+  // console.log(keyword)
   useEffect(() => {
     if (!keyword) {
       setSearchParams({ q: "pop" })
@@ -73,7 +73,7 @@ const MusicPlayer = () => {
       getYoutubeVideos();
     }
   }, [setSearchParams]);
-console.log(selectedVideo)
+// console.log(selectedVideo)
   return (
     <div className='musicplayer-container'>
       <Container>

@@ -46,7 +46,7 @@ const ArtistDetailPage = () => {
   useEffect(() => {
     if (artistTopTracks?.tracks[i]?.preview_url) {
       // preview_url이 있는 경우에만 로직 처리
-      console.log('Found preview_url at index:', i);
+      // console.log('Found preview_url at index:', i);
     } else if (i < artistTopTracks?.tracks.length) {
       // preview_url이 없는 경우 i 증가
       const timer = setTimeout(() => setI(i + 1), 100); // 100ms 후에 i 증가

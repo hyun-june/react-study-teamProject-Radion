@@ -4,7 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './MusicNewReleasesSlide.style.css';
 import MovieCard from '../MusicCard/MusicCard';
-const MusicNewReleasestSlide= ({ NewReleasesData }) => {
+const MusicNewReleasesSlide= ({ NewReleasesData }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 304  },
@@ -18,7 +18,6 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     }}
-    console.log("여기가 종착지",NewReleasesData);
 
   return (
     <div>
@@ -45,4 +44,4 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
   );
 };
 
-export default MusicNewReleasestSlide;
+export default MusicNewReleasesSlide;

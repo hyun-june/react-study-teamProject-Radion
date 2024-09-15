@@ -1,0 +1,13 @@
+.artists_img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.artists_section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.artists_area{
+    text-align: center;
+}

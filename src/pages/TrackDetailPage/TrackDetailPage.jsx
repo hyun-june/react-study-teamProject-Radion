@@ -20,7 +20,6 @@ const TrackDetailPage = () => {
   const toArtistDetailPage = (id, event) => {
     event.preventDefault();
     navigate(`/artists/${id}`);
-
   }
 
   const {
@@ -45,7 +44,7 @@ const TrackDetailPage = () => {
     error: aAError,
   } = useArtistAlbumQuery(artistId);
  
-  console.log(track);
+  // console.log(track);
 
   if (isLoading || aAIsLoading) {
     return <h1>Loading...</h1>;

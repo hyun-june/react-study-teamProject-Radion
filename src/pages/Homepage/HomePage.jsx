@@ -4,6 +4,8 @@ import MusicAlbum from './component/MusicAlbum/MusicAlbum';
 import MusicNewReleases from './component/MusicNewReleases/MusicNewReleases';
 import MusicPlaylist from './component/MusicPlaylist/MusicPlaylist';
 import './HomePage.style.css'
+import ArtistSlide from '../../common/ArtistSlide/ArtistSlide';
+
 
 const HomePage = () => {
   return (
@@ -11,9 +13,10 @@ const HomePage = () => {
       <div className='hompage_container'>
     
       <Banner/>
+      <ArtistSlide />
       <MusicPlaylist/>
       <MusicNewReleases/>
-      <MusicAlbum/>
+      {/* <MusicAlbum/> */}
       </div>
     </div>
   )
