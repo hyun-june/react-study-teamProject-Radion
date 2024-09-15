@@ -63,7 +63,7 @@ const ArtistDetailPage = () => {
     }
   }, [artistTopTracks, i]);
 
-  if (isLoading || aAIsLoading || aTTIsLoading) {
+  if (isLoading || aAIsLoading || aTTIsLoading || rAIsLoading) {
     return <h1>Loading...</h1>;
   }
   if (isError) {
@@ -74,6 +74,9 @@ const ArtistDetailPage = () => {
   }
   if (aTTIsError) {
     return <Alert variant="danger">{aTTError.message}</Alert>;
+  }
+  if (rAIsError) {
+    return <Alert variant="danger">{rAError.message}</Alert>;
   }
 
   return (
