@@ -14,6 +14,11 @@ const TrackListTable = ({ trackList }) => {
     navigate(`/tracks/${id}`);
   }
 
+  const toArtistDetailPage = (id,event)=>{
+    event.preventDefault();
+    navigate(`/artists/${id}`)
+}
+
   return (
     <>
       <Row className="mt-5">
@@ -43,7 +48,7 @@ const TrackListTable = ({ trackList }) => {
               <div>
                 {newTrack?.artists.map((artist, index) => {
                   return (
-                    <span className="tracklisttable_artist_name" key={index}>{artist?.name}</span>
+                    <span className="tracklisttable_artist_name" key={index} onClick={(event) => toArtistDetailPage(artist?.id,event)}>{artist?.name}</span>
                   );
                 })}
               </div>
