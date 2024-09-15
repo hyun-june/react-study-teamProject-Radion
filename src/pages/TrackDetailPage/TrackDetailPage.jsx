@@ -44,8 +44,6 @@ const TrackDetailPage = () => {
     isError: aAIsError,
     error: aAError,
   } = useArtistAlbumQuery(artistId);
- 
-  console.log(track);
 
   if (isLoading || aAIsLoading) {
     return <h1>Loading...</h1>;

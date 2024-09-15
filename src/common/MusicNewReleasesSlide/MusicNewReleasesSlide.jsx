@@ -18,7 +18,7 @@ const MusicNewReleasestSlide= ({ NewReleasesData }) => {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     }}
-    console.log("여기가 종착지",NewReleasesData);
+    
 
   return (
     <div>

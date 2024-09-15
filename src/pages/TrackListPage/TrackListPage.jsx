@@ -7,7 +7,7 @@ import TrackListTable from './TrackListTable/TrackListTable'
 const TrackListPage = () => {
     const {data} = usePlayListItems();
     const trackList = data ? data.slice(0, 9) : [];
-    console.log("11",trackList)
+    // console.log("11",trackList)
     const index = 0;
 
   return (

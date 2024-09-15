@@ -16,8 +16,6 @@ const fetchMusicNewReleasest = async () => {
                 // Add any other required parameters here
             },
         });
-        // Move console.log above the return statement
-        // console.log("fetchMusicNewReleasest", response.data);
 
         return response.data;
     } catch (error) {

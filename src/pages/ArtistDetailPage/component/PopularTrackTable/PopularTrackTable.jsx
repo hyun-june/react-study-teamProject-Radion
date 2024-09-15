@@ -19,7 +19,6 @@ const PopularTrackTable = ({tracks}) => {
     navigate(`/artists/${id}`);
 
   }
-  console.log(tracks)
   return (
     <>
       {tracks?.slice(0, visibleItems).map((track, index) => {

@@ -9,6 +9,7 @@ import { useArtistTopTracksQuery } from './../../hooks/useArtistTopTracks';
 import { useParams } from "react-router-dom";
 import PopularTrackTable from "./component/PopularTrackTable/PopularTrackTable";
 import TrackBox from "../../common/component/TrackBox/TrackBox";
+import { useRelatedArtistsQuery } from "../../hooks/useRelatedArtists";
 
 const ArtistDetailPage = () => {
   const { id } = useParams();
@@ -37,6 +38,15 @@ const ArtistDetailPage = () => {
     error: aTTError,
   } = useArtistTopTracksQuery({id});
 
+  const {
+    data: relatedArtists,
+    isLoading: rAIsLoading,
+    isError: rAIsError,
+    error: rAError,
+  } = useRelatedArtistsQuery(id);
+
+  console.log(relatedArtists)
+
   useEffect(() => {
     if (artist?.name) {
       setArtistName(artist?.name);
@@ -47,7 +57,6 @@ const ArtistDetailPage = () => {
   useEffect(() => {
     if (artistTopTracks?.tracks[i]?.preview_url) {
       // preview_url이 있는 경우에만 로직 처리
-      console.log('Found preview_url at index:', i);
     } else if (i < artistTopTracks?.tracks.length) {
       // preview_url이 없는 경우 i 증가
       const timer = setTimeout(() => setI(i + 1), 100); // 100ms 후에 i 증가
@@ -55,11 +64,17 @@ const ArtistDetailPage = () => {
     }
   }, [artistTopTracks, i]);
 
-  if (isLoading) {
+  if (isLoading || aAIsLoading || aTTIsLoading) {
     return <h1>Loading...</h1>;
   }
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;
+  }
+  if (aAIsError) {
+    return <Alert variant="danger">{aAError.message}</Alert>;
+  }
+  if (aTTIsError) {
+    return <Alert variant="danger">{aTTError.message}</Alert>;
   }
 
   return (
