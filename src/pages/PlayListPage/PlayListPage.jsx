@@ -53,7 +53,7 @@ const MusicPlayer = () => {
       const res = await youtubeApi.get('search', {
         params: {
           part: 'snippet',
-          q: `${keyword? keyword : "pop"} 플레이리스트`,
+          q: `${keyword? keyword : "new popular"} 플레이리스트`,
           maxResults: 10,
           publishedAfter: "2024-01-01T00:00:00Z",
           type: "video",
@@ -68,7 +68,7 @@ const MusicPlayer = () => {
   // console.log(keyword)
   useEffect(() => {
     if (!keyword) {
-      setSearchParams({ q: "pop" })
+      setSearchParams({ q: "new popular" })
     } else {
       getYoutubeVideos();
     }
