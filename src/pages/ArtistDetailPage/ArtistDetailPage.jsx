@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 import PopularTrackTable from "./component/PopularTrackTable/PopularTrackTable";
 import TrackBox from "../../common/component/TrackBox/TrackBox";
 import { useRelatedArtistsQuery } from "../../hooks/useRelatedArtists";
+import ArtistBox from './../../common/component/ArtistBox/ArtistBox';
 
 const ArtistDetailPage = () => {
   const { id } = useParams();
@@ -44,8 +45,6 @@ const ArtistDetailPage = () => {
     isError: rAIsError,
     error: rAError,
   } = useRelatedArtistsQuery(id);
-
-  console.log(relatedArtists)
 
   useEffect(() => {
     if (artist?.name) {
@@ -109,9 +108,14 @@ const ArtistDetailPage = () => {
 
       <PopularTrackTable tracks={artistTopTracks?.tracks}/>
 
-      <Row><div className="mt-5"><span className="trackdetailpage_more_albums">Watch more of {artistName}'s songs</span></div></Row>
+      <Row><div className="mt-5"><span className="artistdetailpage_more_albums">Watch more of {artistName}'s songs</span></div></Row>
       <Row>
         <TrackBox data={artistAlbum?.items}/>
+      </Row>
+
+      <Row><div className="mt-5"><span className="artistdetailpage_related_artists">Other Artists</span></div></Row>
+      <Row>
+        <ArtistBox artists={relatedArtists?.artists}/>
       </Row>
     </Container>
   );
