@@ -5,7 +5,6 @@ import MusicPlaylistSlide from '../../../../common/MusicPlaylistSlide/MusicPlayl
 
 const MusicPlaylist = () => {
     const { data: PlaylistData, isLoading, isError, error } =  usePlaylistQuery();
-    // console.log("PlaylistData", PlaylistData);
 
     if (isLoading) {
         return <h1>Loading...</h1>;

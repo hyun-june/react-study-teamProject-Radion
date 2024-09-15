@@ -4,7 +4,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import api from '../../utils/api';
 
 const MusicRecommendationsCard = ({ music }) => {
-    console.log( "여기가 레커멘카드 마지막 ",music)
     const navigate = useNavigate();
     const secondImage = music.album.images && music.album.images.length > 0 ? music.album.images[0].url : '';
 
