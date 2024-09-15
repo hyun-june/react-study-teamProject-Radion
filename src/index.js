@@ -24,7 +24,7 @@ root.render(
           </UserContextProvider>
         </GoogleOAuthProvider>
       </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
   </Provider>
 );

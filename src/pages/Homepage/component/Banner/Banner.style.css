@@ -4,7 +4,7 @@
     align-items: center; /* Vertically center the banner */
 }
 .banner_img {
-    width: 600px;
+    width: 500px;
     max-width: 800px;
     border-radius: 55px;
     overflow: 'hidden';
@@ -14,7 +14,6 @@
 
 .banner {
     text-align: center; /* Center the content inside the banner */
-
 }
 
 .banner-text-area {
@@ -51,6 +50,7 @@
         justify-content: center; /* Horizontally center the banner */
         align-items: center; /* Vertically center the banner */
     }
+    
     .banner_img {
         width: 600px;
     max-width: 800px;

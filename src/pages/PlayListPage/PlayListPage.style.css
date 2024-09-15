@@ -29,6 +29,7 @@ body{
 .videoList_table:hover{
     background-color: rgb(70, 70, 70);
     border-radius: 10px;
+    cursor: pointer;
 }
   
 .videoList_table{
@@ -81,7 +82,7 @@ body{
     align-items: center;
 }
 
-@media screen and (width: 430px) {
+@media screen and (max-width: 430px) {
     .videoList_table_title{
         overflow: hidden;
         text-overflow: ellipsis;
@@ -107,13 +108,18 @@ body{
 
     .musicplayer_searcharea{
         position: absolute;
-        right: -30px;
+        right: 0px;
         top: 5rem;
     }
 
     .play-button{
-        right: 10px;
-        bottom: 10px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;  
     }
 
+    .preview_video{
+        width: 300px;
+        height: 200px;
+    }
 }

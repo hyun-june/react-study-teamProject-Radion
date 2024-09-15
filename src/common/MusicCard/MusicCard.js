@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const MusicCard = ({ music }) => {
   const navigate = useNavigate();
-  console.log("여기가 Releases 마지막",music);
   const secondImage = music.images && music.images[0] ? music.images[0].url : '';
 
 

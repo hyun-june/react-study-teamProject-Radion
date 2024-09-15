@@ -22,3 +22,18 @@
   font-weight: 800;
   font-size: 2rem;
 }
+
+.artistdetailpage_more_albums {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.artistdetailpage_more_albums:hover {
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+.artistdetailpage_related_artists {
+  font-weight: 800;
+  font-size: 2rem;
+}

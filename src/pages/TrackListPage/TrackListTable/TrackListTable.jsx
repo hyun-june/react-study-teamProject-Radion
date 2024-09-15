@@ -7,13 +7,17 @@ import TrackAudioButton from "../../../common/component/TrackAudioButton/TrackAu
 
 const TrackListTable = ({ trackList }) => {
   const navigate = useNavigate();
-  const visibleItems = 10;
+  const visibleItems = 20;
 
   const toTrackDetailPage = (id, event) => {
     event.preventDefault();
     navigate(`/tracks/${id}`);
-
   }
+
+  const toArtistDetailPage = (id,event)=>{
+    event.preventDefault();
+    navigate(`/artists/${id}`)
+}
 
   return (
     <>
@@ -44,7 +48,7 @@ const TrackListTable = ({ trackList }) => {
               <div>
                 {newTrack?.artists.map((artist, index) => {
                   return (
-                    <span className="tracklisttable_artist_name" key={index}>{artist?.name}</span>
+                    <span className="tracklisttable_artist_name" key={index} onClick={(event) => toArtistDetailPage(artist?.id,event)}>{artist?.name}</span>
                   );
                 })}
               </div>

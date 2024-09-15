@@ -28,6 +28,7 @@
     transform: scale(1.2); /* Adjust the scale factor as needed */
     z-index: 1; /* Bring the hovered image to the front */
   }
+  
   @media screen and (max-width: 1850px){
     .MusicNewReleases_image-card {
       margin-top: 1em;
@@ -57,17 +58,16 @@
       margin-top: 1em;
       height: 350px;
     }
-    .NewReleasest_title{
+    .NewReleases_title{
       margin-top: 1em;
       font-size: 26px;
       font-weight: bold;
       margin-bottom:1em;
-    
     }
   
     .MusicNewReleases_image-card img {
-      height: 220px;
-      width: 220px;
+      height: 200px;
+      width: 200px;
     }
   }
   

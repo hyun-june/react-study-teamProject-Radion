@@ -31,12 +31,12 @@
   margin-top: 4px;
 }
 
-.trackaudiobutton_x {
-  color: rgb(150, 0, 0) !important;
-  position: relative;
-  right: 3px;
-}
+  .trackaudiobutton_x {
+    color: gray;
+    position: relative;
+    right: 3px;
+  }
 
-.trackaudiobutton_x:hover {
-  color: rgb(150, 0, 0) !important;
-}
+  .trackaudiobutton_x:hover {
+    color: rgb(150, 0, 0);
+  }
