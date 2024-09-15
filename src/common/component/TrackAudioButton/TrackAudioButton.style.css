@@ -40,3 +40,12 @@
 .trackaudiobutton_x:hover {
   color: rgb(150, 0, 0) !important;
 }
+
+@media screen and (max-width: 768px) {
+  .trackaudiobutton_play_icon {
+    display: block;
+  }
+  .trackaudiobutton_index_icon{
+    display: none;
+  }
+}
