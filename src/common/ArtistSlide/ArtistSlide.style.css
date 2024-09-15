@@ -11,6 +11,12 @@
 
 .artists_area{
     text-align: center;
+    transition: 0.2s;
+}
+
+.artists_area:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 430px) {
